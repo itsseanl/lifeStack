@@ -6,6 +6,7 @@
   "homepage": "https://itsseanl.github.io/lifeStack",
   "license": "MIT",
   "scripts": {
+    "start":"index.js",
     "serve": "live-server public/",
     "build": "react-scripts build",
     "build-wp": "webpack --watch",
@@ -31,5 +32,8 @@
     "css-loader": "^2.1.0",
     "style-loader": "^0.23.1",
     "webpack": "^3.1.0"
+  },
+  "engines":{
+    "node":"8.12.0"
   }
 }
