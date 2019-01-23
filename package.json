@@ -1,12 +1,12 @@
 {
   "name": "lifeStack",
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "index.html",
   "author": "Sean Lyons",
   "homepage": "https://itsseanl.github.io/lifeStack",
   "license": "MIT",
   "scripts": {
-    "start":"node index.html",
+    "start":"node ./index.html",
     "serve": "live-server public/",
     "build": "react-scripts build",
     "build-wp": "webpack --watch",
