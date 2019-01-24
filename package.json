@@ -1,18 +1,18 @@
 {
   "name": "lifeStack",
   "version": "1.0.0",
-  "main": "index.html",
+  "main": "index.js",
   "author": "Sean Lyons",
   "homepage": "https://itsseanl.github.io/lifeStack",
   "license": "MIT",
   "scripts": {
-    "start":"./public/index.html",
     "serve": "live-server public/",
     "build": "react-scripts build",
     "build-wp": "webpack --watch",
     "build:prod": "webpack -p --env production",
     "build-babel": "babel src/app.js --out-file=public/scripts/app.js --presets=env,react --watch",
     "deploy": "gh-pages -d build",
+    "start":"node ./server/server.js",
     "heroku-postbuild": "yarn run build:prod"
   },
   "dependencies": {
