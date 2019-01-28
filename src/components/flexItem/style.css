@@ -14,7 +14,7 @@
  padding: 5px;
  background-color:white;
  transition: 0.3s all;
- border-bottom:3px solid rgb(78,223,221,0);
+ border-bottom:3px solid white;
  font-family:'Montserrat', sans-serif;
 
 }
@@ -36,7 +36,28 @@
 }
 .btnModal {
  border:none;
+ background-color:white;
 }
 .btnModal:focus{
   outline:none;
+}
+
+@media only screen and (max-width: 800px) {
+  .flexItem{
+    width:30vw;
+  }
+  .img{
+    height:15vh;
+  }
+
+
+.flexItem{
+  width:80vw;
+}
+.flexItem img{
+  height:50vh;
+}
+.three{
+  width:50vw!important
+}
 }

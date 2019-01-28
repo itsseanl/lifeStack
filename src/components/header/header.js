@@ -20,7 +20,7 @@ class Header extends React.Component {
                            html.clientHeight, html.scrollHeight, html.offsetHeight );
     let windowsScrollTop  = window.pageYOffset;
     console.log(windowsScrollTop + ' ' + height);
-    console.log(height*0.25);
+    console.log(height+300);
            if(windowsScrollTop >= height*0.25){
              this.setState({ scroll: false, visible:true});
 

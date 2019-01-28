@@ -18,6 +18,7 @@
 
 .modalOn {
   height: 100%;
+  overflow:hidden;
 }
 .modalOff {
   height: 0;
@@ -44,7 +45,7 @@
 
 }
 .modalImage img{
-  height:50vh;
+  height:50%;
 }
 .modalText{
   display:flex;
@@ -77,4 +78,27 @@
 
 .btnClose:focus{
   outline:none;
+}
+
+@media only screen and (max-width: 800px) {
+  .modalContent{
+    flex-direction: column;
+  }
+  .modalImage{
+    width:100vw;
+    height:30vh;
+  }
+  .img{
+    height:auto;
+    width:50vh;
+  }
+  .modalText{
+    width:90vw;
+    height:70vh;
+  }
+  .btnClose{
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
 }
