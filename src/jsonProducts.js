@@ -1,4 +1,11 @@
 const jsonProducts = {
+  "componentVisible": [
+    {
+      "blog":true,
+      "products":false
+    }
+
+  ],
 "products": [
     {
       "name": "Macbook Air",

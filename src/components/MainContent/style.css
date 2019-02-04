@@ -1,0 +1,50 @@
+.navbar{
+  color:black;
+  width: 100vw;
+  margin-bottom:5vh;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+}
+.navbar > ul{
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  padding-left:0;
+}
+.navbar > ul li{
+  display:inline;
+  padding-left:2vw;
+  padding-right:2vw;
+}
+
+.nav-button{
+  background-color: none;
+  border:0;
+  border:none;
+  border-bottom:2px solid white;
+
+  transition:0.3s all;
+
+}
+.nav-button:focus{
+  outline:none;
+  border-bottom:2px solid orange;
+  transition:0.3s all;
+}
+.component-page{
+  width:0;
+  visibility: hidden;
+  overflow:hidden;
+  height:0;
+  transition:0.3s all;
+
+}
+.selected{
+  width:100%;
+  height:70vh;
+  visibility: visible;
+  transition:0.3s all;
+
+}
