@@ -55,3 +55,24 @@ background-repeat: no-repeat;
 padding:5px;
 
 }
+
+@media only screen and (max-width: 800px) {
+.about-wrapper{
+  flex-direction: column;
+}
+.left, .right{
+  width:100vw;
+  height:auto;
+  padding:0;
+}
+.left{
+  height:40vh;
+}
+.post{
+  flex-direction: column;
+}
+.post-img{
+  width:100vw;
+  height:30vh;
+}
+}
