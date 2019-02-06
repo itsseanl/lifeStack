@@ -475,7 +475,7 @@ var singleton = null;
 var	singletonCounter = 0;
 var	stylesInsertedAtTop = [];
 
-var	fixUrls = __webpack_require__(25);
+var	fixUrls = __webpack_require__(23);
 
 module.exports = function(list, options) {
 	if (typeof DEBUG !== "undefined" && DEBUG) {
@@ -1066,23 +1066,15 @@ var _reactDom = __webpack_require__(2);
 
 var _reactDom2 = _interopRequireDefault(_reactDom);
 
-var _jsonProducts = __webpack_require__(20);
-
-var _jsonProducts2 = _interopRequireDefault(_jsonProducts);
-
-var _products = __webpack_require__(21);
-
-var _products2 = _interopRequireDefault(_products);
-
-var _header = __webpack_require__(28);
+var _header = __webpack_require__(20);
 
 var _header2 = _interopRequireDefault(_header);
 
-var _about = __webpack_require__(31);
+var _MainContent = __webpack_require__(24);
 
-var _about2 = _interopRequireDefault(_about);
+var _MainContent2 = _interopRequireDefault(_MainContent);
 
-__webpack_require__(34);
+__webpack_require__(37);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -1098,10 +1090,7 @@ var ReactModalApp = function (_React$Component) {
   function ReactModalApp(props) {
     _classCallCheck(this, ReactModalApp);
 
-    var _this = _possibleConstructorReturn(this, (ReactModalApp.__proto__ || Object.getPrototypeOf(ReactModalApp)).call(this, props));
-
-    _this.state = _jsonProducts2.default;
-    return _this;
+    return _possibleConstructorReturn(this, (ReactModalApp.__proto__ || Object.getPrototypeOf(ReactModalApp)).call(this, props));
   }
 
   _createClass(ReactModalApp, [{
@@ -1111,30 +1100,7 @@ var ReactModalApp = function (_React$Component) {
         'div',
         { className: 'appWrapper' },
         _react2.default.createElement(_header2.default, null),
-        _react2.default.createElement(
-          'div',
-          { className: 'navbar' },
-          _react2.default.createElement(
-            'ul',
-            null,
-            _react2.default.createElement(
-              'li',
-              null,
-              'Products'
-            ),
-            _react2.default.createElement(
-              'li',
-              null,
-              'Programs'
-            ),
-            _react2.default.createElement(
-              'li',
-              null,
-              'About'
-            )
-          )
-        ),
-        _react2.default.createElement(_products2.default, { productList: this.state.products })
+        _react2.default.createElement(_MainContent2.default, null)
       );
     }
   }]);
@@ -24648,67 +24614,6 @@ exports.unstable_unsubscribe = unstable_unsubscribe;
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-var jsonProducts = {
-  "products": [{
-    "name": "Macbook Air",
-    "price": "$999",
-    "description": "Aliquam pretium mi non faucibus dapibus. Integer ac urna ante. Donec tortor tellus, pulvinar et nisi id, auctor elementum tellus. Cras sed metus non metus suscipit faucibus. Donec varius ex nec vehicula tincidunt. In tempor risus ut finibus aliquam. Vivamus ipsum enim, pulvinar vel urna non, gravida ultrices nisl. Suspendisse potenti. Pellentesque vel risus sed quam fermentum mattis in at nisi. Quisque odio dui, aliquet vitae nisl interdum, tincidunt lacinia arcu. Sed blandit ex placerat, luctus nibh in, convallis est. Duis vel egestas diam, ornare ultricies erat",
-    "image": "images/mba.png"
-  }, {
-    "name": "Custom Build",
-    "price": "$780",
-    "description": "Aliquam pretium mi non faucibus dapibus. Integer ac urna ante. Donec tortor tellus, pulvinar et nisi id, auctor elementum tellus. Cras sed metus non metus suscipit faucibus. Donec varius ex nec vehicula tincidunt. In tempor risus ut finibus aliquam. Vivamus ipsum enim, pulvinar vel urna non, gravida ultrices nisl. Suspendisse potenti. Pellentesque vel risus sed quam fermentum mattis in at nisi. Quisque odio dui, aliquet vitae nisl interdum, tincidunt lacinia arcu. Sed blandit ex placerat, luctus nibh in, convallis est. Duis vel egestas diam, ornare ultricies erat",
-    "image": "images/carbide400c.png"
-  }, {
-    "name": "HP 25es IPS FHD",
-    "price": "$150",
-    "description": "Aliquam pretium mi non faucibus dapibus. Integer ac urna ante. Donec tortor tellus, pulvinar et nisi id, auctor elementum tellus. Cras sed metus non metus suscipit faucibus. Donec varius ex nec vehicula tincidunt. In tempor risus ut finibus aliquam. Vivamus ipsum enim, pulvinar vel urna non, gravida ultrices nisl. Suspendisse potenti. Pellentesque vel risus sed quam fermentum mattis in at nisi. Quisque odio dui, aliquet vitae nisl interdum, tincidunt lacinia arcu. Sed blandit ex placerat, luctus nibh in, convallis est. Duis vel egestas diam, ornare ultricies erat",
-    "image": "images/hp25es.png"
-  }, {
-    "name": "iPad 6th Gen",
-    "price": "$329",
-    "description": "Aliquam pretium mi non faucibus dapibus. Integer ac urna ante. Donec tortor tellus, pulvinar et nisi id, auctor elementum tellus. Cras sed metus non metus suscipit faucibus. Donec varius ex nec vehicula tincidunt. In tempor risus ut finibus aliquam. Vivamus ipsum enim, pulvinar vel urna non, gravida ultrices nisl. Suspendisse potenti. Pellentesque vel risus sed quam fermentum mattis in at nisi. Quisque odio dui, aliquet vitae nisl interdum, tincidunt lacinia arcu. Sed blandit ex placerat, luctus nibh in, convallis est. Duis vel egestas diam, ornare ultricies erat",
-    "image": "images/ipad.png"
-  }, {
-    "name": "Logitech K840 Mechanical Keyboard",
-    "price": "$70",
-    "description": "Aliquam pretium mi non faucibus dapibus. Integer ac urna ante. Donec tortor tellus, pulvinar et nisi id, auctor elementum tellus. Cras sed metus non metus suscipit faucibus. Donec varius ex nec vehicula tincidunt. In tempor risus ut finibus aliquam. Vivamus ipsum enim, pulvinar vel urna non, gravida ultrices nisl. Suspendisse potenti. Pellentesque vel risus sed quam fermentum mattis in at nisi. Quisque odio dui, aliquet vitae nisl interdum, tincidunt lacinia arcu. Sed blandit ex placerat, luctus nibh in, convallis est. Duis vel egestas diam, ornare ultricies erat",
-    "image": "images/k840.png"
-  }, {
-    "name": "Logitech M570 Trackball Mouse",
-    "price": "$50",
-    "description": "Aliquam pretium mi non faucibus dapibus. Integer ac urna ante. Donec tortor tellus, pulvinar et nisi id, auctor elementum tellus. Cras sed metus non metus suscipit faucibus. Donec varius ex nec vehicula tincidunt. In tempor risus ut finibus aliquam. Vivamus ipsum enim, pulvinar vel urna non, gravida ultrices nisl. Suspendisse potenti. Pellentesque vel risus sed quam fermentum mattis in at nisi. Quisque odio dui, aliquet vitae nisl interdum, tincidunt lacinia arcu. Sed blandit ex placerat, luctus nibh in, convallis est. Duis vel egestas diam, ornare ultricies erat",
-    "image": "images/m570.png"
-  }, {
-    "name": "Pixel 2 XL",
-    "price": "$850",
-    "description": "Aliquam pretium mi non faucibus dapibus. Integer ac urna ante. Donec tortor tellus, pulvinar et nisi id, auctor elementum tellus. Cras sed metus non metus suscipit faucibus. Donec varius ex nec vehicula tincidunt. In tempor risus ut finibus aliquam. Vivamus ipsum enim, pulvinar vel urna non, gravida ultrices nisl. Suspendisse potenti. Pellentesque vel risus sed quam fermentum mattis in at nisi. Quisque odio dui, aliquet vitae nisl interdum, tincidunt lacinia arcu. Sed blandit ex placerat, luctus nibh in, convallis est. Duis vel egestas diam, ornare ultricies erat",
-    "image": "images/pixel2xl.png"
-  }, {
-    "name": "TCL 49' 4k HDR TV",
-    "price": "$270",
-    "description": "Aliquam pretium mi non faucibus dapibus. Integer ac urna ante. Donec tortor tellus, pulvinar et nisi id, auctor elementum tellus. Cras sed metus non metus suscipit faucibus. Donec varius ex nec vehicula tincidunt. In tempor risus ut finibus aliquam. Vivamus ipsum enim, pulvinar vel urna non, gravida ultrices nisl. Suspendisse potenti. Pellentesque vel risus sed quam fermentum mattis in at nisi. Quisque odio dui, aliquet vitae nisl interdum, tincidunt lacinia arcu. Sed blandit ex placerat, luctus nibh in, convallis est. Duis vel egestas diam, ornare ultricies erat",
-    "image": "images/tcl49.png"
-  }, {
-    "name": "Logitech z533 Desktop Speakers",
-    "price": "$100",
-    "description": "Aliquam pretium mi non faucibus dapibus. Integer ac urna ante. Donec tortor tellus, pulvinar et nisi id, auctor elementum tellus. Cras sed metus non metus suscipit faucibus. Donec varius ex nec vehicula tincidunt. In tempor risus ut finibus aliquam. Vivamus ipsum enim, pulvinar vel urna non, gravida ultrices nisl. Suspendisse potenti. Pellentesque vel risus sed quam fermentum mattis in at nisi. Quisque odio dui, aliquet vitae nisl interdum, tincidunt lacinia arcu. Sed blandit ex placerat, luctus nibh in, convallis est. Duis vel egestas diam, ornare ultricies erat",
-    "image": "images/z533.png"
-  }]
-};
-
-exports.default = jsonProducts;
-
-/***/ }),
-/* 21 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
@@ -24720,11 +24625,7 @@ var _reactDom = __webpack_require__(2);
 
 var _reactDom2 = _interopRequireDefault(_reactDom);
 
-var _Modal = __webpack_require__(22);
-
-var _Modal2 = _interopRequireDefault(_Modal);
-
-__webpack_require__(26);
+__webpack_require__(21);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -24734,175 +24635,85 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-var Products = function (_React$Component) {
-  _inherits(Products, _React$Component);
+var Header = function (_React$Component) {
+  _inherits(Header, _React$Component);
 
-  function Products() {
-    _classCallCheck(this, Products);
+  function Header(props) {
+    _classCallCheck(this, Header);
 
-    var _this = _possibleConstructorReturn(this, (Products.__proto__ || Object.getPrototypeOf(Products)).call(this));
+    var _this = _possibleConstructorReturn(this, (Header.__proto__ || Object.getPrototypeOf(Header)).call(this, props));
 
+    _this.handleScroll = _this.handleScroll.bind(_this);
     _this.state = {
-      modal: [{
-        show: false,
-        name: '',
-        price: '',
-        description: '',
-        image: ''
-      }]
+      scroll: true,
+      visible: false
     };
     return _this;
   }
 
-  _createClass(Products, [{
-    key: 'showModal',
-    value: function showModal(name, price, description, image) {
-      this.setState({
-        modal: [{
-          show: true,
-          name: name,
-          price: price,
-          description: description,
-          image: image
-        }]
-      });
+  _createClass(Header, [{
+    key: 'handleScroll',
+    value: function handleScroll() {
+      var body = document.body,
+          html = document.documentElement;
+
+      var height = Math.max(body.scrollHeight, body.offsetHeight, html.clientHeight, html.scrollHeight, html.offsetHeight);
+      var windowsScrollTop = window.pageYOffset;
+      console.log(windowsScrollTop + ' ' + height);
+      console.log(height + 300);
+      if (windowsScrollTop >= height * 0.25) {
+        this.setState({ scroll: false, visible: true });
+      } else {
+        this.setState({ scroll: true, visible: false });
+      }
     }
   }, {
-    key: 'hideModal',
-    value: function hideModal() {
-      var newState = this.state;
-      console.log(newState);
-      newState.modal[0].show = false;
-      this.setState(newState);
-    }
-  }, {
-    key: 'handleClick',
-    value: function handleClick() {
-      alert('clicked');
+    key: 'componentDidMount',
+    value: function componentDidMount() {
+      console.log(this.titleref);
+
+      window.addEventListener('scroll', this.handleScroll);
     }
   }, {
     key: 'render',
     value: function render() {
-      var _this2 = this;
-
+      var fluidFixedClassName = this.state.scroll ? "titleh1" : "titleh1 fixed";
+      var hiddenVisibleClassName = this.state.visible ? "titleh6 visible" : "title h6";
       return _react2.default.createElement(
         'div',
-        { className: 'wrapper' },
-        _react2.default.createElement(_Modal2.default, { info: this.state.modal, handleClose: this.hideModal.bind(this), showModal: this.showModal.bind(this) }),
-        this.props.productList.map(function (_ref) {
-          var name = _ref.name,
-              price = _ref.price,
-              description = _ref.description,
-              image = _ref.image;
-          return _react2.default.createElement(
-            'button',
-            { className: 'btnModal', onClick: function onClick() {
-                return _this2.showModal(name, price, description, image);
-              } },
-            _react2.default.createElement(
-              'div',
-              { className: 'flexItem' },
-              _react2.default.createElement('img', { key: image, src: image, className: 'img' }),
-              _react2.default.createElement(
-                'p',
-                { key: name },
-                name
-              ),
-              _react2.default.createElement(
-                'p',
-                { key: price },
-                price
-              )
-            )
-          );
-        })
+        { className: 'header' },
+        _react2.default.createElement(
+          'div',
+          { className: 'overlay' },
+          _react2.default.createElement(
+            'h1',
+            { className: fluidFixedClassName },
+            'lifeStack ',
+            _react2.default.createElement('i', { 'class': 'fas fa-align-left headerI' })
+          ),
+          _react2.default.createElement(
+            'h6',
+            { className: hiddenVisibleClassName },
+            'Technology for Every Day'
+          )
+        )
       );
     }
   }]);
 
-  return Products;
+  return Header;
 }(_react2.default.Component);
 
-exports.default = Products;
+;
+
+exports.default = Header;
 
 /***/ }),
-/* 22 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-
-var _react = __webpack_require__(1);
-
-var _react2 = _interopRequireDefault(_react);
-
-var _reactDom = __webpack_require__(2);
-
-var _reactDom2 = _interopRequireDefault(_reactDom);
-
-__webpack_require__(23);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-var Modal = function Modal(_ref) {
-  var info = _ref.info,
-      handleClose = _ref.handleClose,
-      showModal = _ref.showModal;
-
-  console.log(info);
-  var showHideClassName = info[0].show ? "modal modalOn" : "modal modalOff";
-
-  return _react2.default.createElement(
-    'div',
-    { className: showHideClassName },
-    _react2.default.createElement(
-      'div',
-      { className: 'modalContent' },
-      _react2.default.createElement(
-        'div',
-        { className: 'modalImage' },
-        _react2.default.createElement('img', { src: info[0].image })
-      ),
-      _react2.default.createElement(
-        'div',
-        { className: 'modalText' },
-        _react2.default.createElement(
-          'h1',
-          { className: 'item' },
-          info[0].name
-        ),
-        _react2.default.createElement(
-          'h3',
-          { className: 'price' },
-          info[0].price
-        ),
-        _react2.default.createElement(
-          'p',
-          { className: 'description' },
-          info[0].description
-        )
-      ),
-      _react2.default.createElement(
-        'button',
-        { className: 'btnClose', onClick: handleClose },
-        _react2.default.createElement('i', { 'class': 'fas fa-times' })
-      )
-    )
-  );
-};
-
-exports.default = Modal;
-
-/***/ }),
-/* 23 */
+/* 21 */
 /***/ (function(module, exports, __webpack_require__) {
 
 
-var content = __webpack_require__(24);
+var content = __webpack_require__(22);
 
 if(typeof content === 'string') content = [[module.i, content, '']];
 
@@ -24948,20 +24759,20 @@ if(false) {
 }
 
 /***/ }),
-/* 24 */
+/* 22 */
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(3)(false);
 // Imports
-exports.push([module.i, "@import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro);", ""]);
+exports.push([module.i, "@import url(https://fonts.googleapis.com/css?family=Montserrat);", ""]);
 
 // Module
-exports.push([module.i, ".modal {\n z-index:1;\n transition: all 0.5s;\n display: block;\n opacity:1; /* Hidden by default */\n position: fixed; /* Stay in place */\n z-index: 1; /* Sit on top */\n left: 0;\n top: 0;\n width: 100%; /* Full width */\n height:0; /* Full height */\n overflow: auto; /* Enable scroll if needed */\n background-color: rgb(0,0,0); /* Fallback color */\n background-color: white; /* Black w/ opacity */\n}\n\n.modalOn {\n  height: 100%;\n}\n.modalOff {\n  height: 0;\n}\n.modalContent{\n  font-family: 'Source Sans Pro', sans-serif;\n  display:flex;\n  flex-direction: row;\n  width:100vw;\n  height:100vh;\n  justify-content: center;\n  align-content: center;\n  flex: 1 0 auto;\n}\n.modalImage{\n  width:50vw;\n  height:100vh;\n  display:flex;\n  align-items: center;\n  justify-content: center;\n  /* background-color:rgb(78,223,221); */\n  background-color:rgba(6, 10, 10, 0.9);\n  border-right: 2px solid #EE7E33;\n\n}\n.modalImage img{\n  height:50vh;\n}\n.modalText{\n  display:flex;\n  width:50vw;\n  flex-direction: column;\n  padding-left: 5vw;\n  justify-content: center;\n  height:100vh;\n}\n.item{\n  font-size:2em;\n}\n\n.btnClose{\n  height:7vw;\n  width:7vw;\n  font-size:1rem;\n  color:#787878;\n  border:none;\n  border-bottom-left-radius:8px;\n  transition:0.3s all;\n\n}\n\n.btnClose:hover{\n  font-size:1.5rem;\n  color:#EE7E33;\n  transition:0.3s all;\n}\n\n.btnClose:focus{\n  outline:none;\n}\n", ""]);
+exports.push([module.i, "* {\n  font-family:'Montserrat';\n}\n.header{\n  min-height:90vh;\n  width:100vw;\n  background-image:url('/images/room.jpg');\n  background-size:cover;\n  background-repeat: no-repeat;\n  border-bottom:3px solid #EE7E33;\n}\n\n.overlay{\n  width:100vw;\n  height:100vh;\n  background-color:black;\n  /* background-color:rgb(78,223,221); */\n  opacity:0.9;\n  display:flex;\n  align-items:center;\n  justify-content: center;\n  flex-direction: column;\n  transition:0.3 all;\n\n  -webkit-animation: fadein 3s; /* Safari, Chrome and Opera > 12.1 */\n     -moz-animation: fadein 3s; /* Firefox < 16 */\n      -ms-animation: fadein 3s; /* Internet Explorer */\n       -o-animation: fadein 3s; /* Opera < 12.1 */\n          animation: fadein 3s;\n}\n\n.overlay > h1 {\n  color:white;\n  opacity:1;\n  margin:0;\n  position:fixed;\n  -webkit-animation: fadeH1 4s; /* Safari, Chrome and Opera > 12.1 */\n     -moz-animation: fadeH1 4s; /* Firefox < 16 */\n      -ms-animation: fadeH1 4s; /* Internet Explorer */\n       -o-animation: fadeH1 4s; /* Opera < 12.1 */\n          animation: fadeH1 4s;\n}\n\n.overlay > h6{\n  color:white;\n  position:relative;\n  opacity: 0;\n  margin-top: 95vh;\n  margin-left:-1vw;\n  transition:0.3s all;\n\n}\n.visible {\n  opacity: 1!important;\n  transition:0.3s all;\n}\n.headerI{\n  color:#EE7E33;\n}\n.fixed{\n  position:absolute!important;\n  margin-top:40vh!important;\n  transition:0.3 all;\n}\n.overlay > a{\n  text-decoration: none;\n}\n@keyframes fadein {\nfrom { opacity: 1; }\nto   { opacity: 0.9; }\n}\n\n/* Firefox < 16 */\n@-moz-keyframes fadein {\nfrom { opacity: 1; }\nto   { opacity: 0.9; }\n}\n\n/* Safari, Chrome and Opera > 12.1 */\n@-webkit-keyframes fadein {\nfrom { opacity: 1; }\nto   { opacity: 0.9; }\n}\n\n/* Internet Explorer */\n@-ms-keyframes fadein {\nfrom { opacity: 1; }\nto   { opacity: 0.9; }\n}\n\n/* Opera < 12.1 */\n@-o-keyframes fadein {\nfrom { opacity: 1; }\nto   { opacity: 0.9; }\n}\n\n@keyframes fadeH1 {\nfrom { opacity: 0; }\nto   { opacity: 1; }\n}\n\n/* Firefox < 16 */\n@-moz-keyframes fadeH1 {\nfrom { opacity: 0; }\nto   { opacity: 1; }\n}\n\n/* Safari, Chrome and Opera > 12.1 */\n@-webkit-keyframes fadeH1 {\nfrom { opacity: 0; }\nto   { opacity: 1; }\n}\n\n/* Internet Explorer */\n@-ms-keyframes fadeH1 {\nfrom { opacity: 0; }\nto   { opacity: 1; }\n}\n\n/* Opera < 12.1 */\n@-o-keyframes fadeH1 {\nfrom { opacity: 0; }\nto   { opacity: 1; }\n}\n\n.header > img {\n  height:auto;\n  width:100vw;\n}\n", ""]);
 
 
 
 /***/ }),
-/* 25 */
+/* 23 */
 /***/ (function(module, exports) {
 
 
@@ -25056,365 +24867,30 @@ module.exports = function (css) {
 
 
 /***/ }),
-/* 26 */
-/***/ (function(module, exports, __webpack_require__) {
-
-
-var content = __webpack_require__(27);
-
-if(typeof content === 'string') content = [[module.i, content, '']];
-
-var transform;
-var insertInto;
-
-
-
-var options = {"hmr":true}
-
-options.transform = transform
-options.insertInto = undefined;
-
-var update = __webpack_require__(4)(content, options);
-
-if(content.locals) module.exports = content.locals;
-
-if(false) {
-	module.hot.accept("!!../../../node_modules/css-loader/dist/cjs.js!./style.css", function() {
-		var newContent = require("!!../../../node_modules/css-loader/dist/cjs.js!./style.css");
-
-		if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
-
-		var locals = (function(a, b) {
-			var key, idx = 0;
-
-			for(key in a) {
-				if(!b || a[key] !== b[key]) return false;
-				idx++;
-			}
-
-			for(key in b) idx--;
-
-			return idx === 0;
-		}(content.locals, newContent.locals));
-
-		if(!locals) throw new Error('Aborting CSS HMR due to changed css-modules locals.');
-
-		update(newContent);
-	});
-
-	module.hot.dispose(function() { update(); });
-}
-
-/***/ }),
-/* 27 */
-/***/ (function(module, exports, __webpack_require__) {
-
-exports = module.exports = __webpack_require__(3)(false);
-// Imports
-exports.push([module.i, "@import url(https://fonts.googleapis.com/css?family=Montserrat);", ""]);
-
-// Module
-exports.push([module.i, ".flexItem {\n width : 15vw;\n margin: 1vw;\n border-radius: 0px;\n display: flex;\n flex-direction: column;\n flex-wrap: wrap;\n flex: 1 1 auto;\n align-items: center;\n justify-content: center;\n color: black;\n padding: 5px;\n background-color:white;\n transition: 0.3s all;\n border-bottom:3px solid rgb(78,223,221,0);\n font-family:'Montserrat', sans-serif;\n\n}\n.flexItem:hover{\n  border-bottom:3px solid #EE7E33;\n  transition: 0.3s all;\n}\n.wrapper {\n display: flex;\n flex-direction: row;\n justify-content: center;\n flex: 1 0 auto;\n flex-wrap: wrap;\n margin:20px;\n}\n.img {\n width : auto;\n height: 10vw;\n}\n.btnModal {\n border:none;\n}\n.btnModal:focus{\n  outline:none;\n}\n", ""]);
-
-
-
-/***/ }),
-/* 28 */
-/***/ (function(module, exports, __webpack_require__) {
+/* 24 */
+/***/ (function(module, exports) {
 
 "use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-
-var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-var _react = __webpack_require__(1);
-
-var _react2 = _interopRequireDefault(_react);
-
-var _reactDom = __webpack_require__(2);
-
-var _reactDom2 = _interopRequireDefault(_reactDom);
-
-__webpack_require__(29);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-var Header = function (_React$Component) {
-  _inherits(Header, _React$Component);
-
-  function Header(props) {
-    _classCallCheck(this, Header);
-
-    var _this = _possibleConstructorReturn(this, (Header.__proto__ || Object.getPrototypeOf(Header)).call(this, props));
-
-    _this.handleScroll = _this.handleScroll.bind(_this);
-    _this.state = {
-      scroll: true,
-      visible: false
-    };
-    return _this;
-  }
-
-  _createClass(Header, [{
-    key: 'handleScroll',
-    value: function handleScroll() {
-      var body = document.body,
-          html = document.documentElement;
-
-      var height = Math.max(body.scrollHeight, body.offsetHeight, html.clientHeight, html.scrollHeight, html.offsetHeight);
-      var windowsScrollTop = window.pageYOffset;
-      console.log(windowsScrollTop + ' ' + height);
-      console.log(height * 0.25);
-      if (windowsScrollTop >= height * 0.25) {
-        this.setState({ scroll: false, visible: true });
-      } else {
-        this.setState({ scroll: true, visible: false });
-      }
-    }
-  }, {
-    key: 'componentDidMount',
-    value: function componentDidMount() {
-      console.log(this.titleref);
-
-      window.addEventListener('scroll', this.handleScroll);
-    }
-  }, {
-    key: 'render',
-    value: function render() {
-      var fluidFixedClassName = this.state.scroll ? "titleh1" : "titleh1 fixed";
-      var hiddenVisibleClassName = this.state.visible ? "titleh6 visible" : "title h6";
-      return _react2.default.createElement(
-        'div',
-        { className: 'header' },
-        _react2.default.createElement(
-          'div',
-          { className: 'overlay' },
-          _react2.default.createElement(
-            'h1',
-            { className: fluidFixedClassName },
-            'lifeStack ',
-            _react2.default.createElement('i', { 'class': 'fas fa-align-left headerI' })
-          ),
-          _react2.default.createElement(
-            'h6',
-            { className: hiddenVisibleClassName },
-            'Technology for Every Day'
-          )
-        )
-      );
-    }
-  }]);
-
-  return Header;
-}(_react2.default.Component);
-
-;
-
-exports.default = Header;
+throw new Error("Module build failed: SyntaxError: Unexpected token (90:6)\n\n\u001b[0m \u001b[90m 88 | \u001b[39m      \u001b[33m<\u001b[39m\u001b[33m/\u001b[39m\u001b[33mdiv\u001b[39m\u001b[33m>\u001b[39m\n \u001b[90m 89 | \u001b[39m      \u001b[33m<\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 90 | \u001b[39m      \u001b[33m<\u001b[39m\u001b[33m/\u001b[39m\u001b[33mdiv\u001b[39m\u001b[33m>\u001b[39m\n \u001b[90m    | \u001b[39m      \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 91 | \u001b[39m    )\u001b[33m;\u001b[39m\n \u001b[90m 92 | \u001b[39m  }\n \u001b[90m 93 | \u001b[39m}\u001b[0m\n");
 
 /***/ }),
-/* 29 */
+/* 25 */,
+/* 26 */,
+/* 27 */,
+/* 28 */,
+/* 29 */,
+/* 30 */,
+/* 31 */,
+/* 32 */,
+/* 33 */,
+/* 34 */,
+/* 35 */,
+/* 36 */,
+/* 37 */
 /***/ (function(module, exports, __webpack_require__) {
 
 
-var content = __webpack_require__(30);
-
-if(typeof content === 'string') content = [[module.i, content, '']];
-
-var transform;
-var insertInto;
-
-
-
-var options = {"hmr":true}
-
-options.transform = transform
-options.insertInto = undefined;
-
-var update = __webpack_require__(4)(content, options);
-
-if(content.locals) module.exports = content.locals;
-
-if(false) {
-	module.hot.accept("!!../../../node_modules/css-loader/dist/cjs.js!./style.css", function() {
-		var newContent = require("!!../../../node_modules/css-loader/dist/cjs.js!./style.css");
-
-		if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
-
-		var locals = (function(a, b) {
-			var key, idx = 0;
-
-			for(key in a) {
-				if(!b || a[key] !== b[key]) return false;
-				idx++;
-			}
-
-			for(key in b) idx--;
-
-			return idx === 0;
-		}(content.locals, newContent.locals));
-
-		if(!locals) throw new Error('Aborting CSS HMR due to changed css-modules locals.');
-
-		update(newContent);
-	});
-
-	module.hot.dispose(function() { update(); });
-}
-
-/***/ }),
-/* 30 */
-/***/ (function(module, exports, __webpack_require__) {
-
-exports = module.exports = __webpack_require__(3)(false);
-// Imports
-exports.push([module.i, "@import url(https://fonts.googleapis.com/css?family=Montserrat);", ""]);
-
-// Module
-exports.push([module.i, "* {\n  font-family:'Montserrat';\n}\n.header{\n  min-height:90vh;\n  width:100vw;\n  background-image:url('/images/room.jpg');\n  background-size:cover;\n  background-repeat: no-repeat;\n  border-bottom:3px solid #EE7E33;\n}\n\n.overlay{\n  width:100vw;\n  height:100vh;\n  background-color:black;\n  /* background-color:rgb(78,223,221); */\n  opacity:0.9;\n  display:flex;\n  align-items:center;\n  justify-content: center;\n  flex-direction: column;\n  transition:0.3 all;\n\n  -webkit-animation: fadein 3s; /* Safari, Chrome and Opera > 12.1 */\n     -moz-animation: fadein 3s; /* Firefox < 16 */\n      -ms-animation: fadein 3s; /* Internet Explorer */\n       -o-animation: fadein 3s; /* Opera < 12.1 */\n          animation: fadein 3s;\n}\n\n.overlay > h1 {\n  color:white;\n  opacity:1;\n  margin:0;\n  position:fixed;\n  -webkit-animation: fadeH1 4s; /* Safari, Chrome and Opera > 12.1 */\n     -moz-animation: fadeH1 4s; /* Firefox < 16 */\n      -ms-animation: fadeH1 4s; /* Internet Explorer */\n       -o-animation: fadeH1 4s; /* Opera < 12.1 */\n          animation: fadeH1 4s;\n}\n\n.overlay > h6{\n  color:white;\n  position:relative;\n  opacity: 0;\n  margin-top: 95vh;\n  margin-left:-1vw;\n  transition:0.3s all;\n\n}\n.visible {\n  opacity: 1!important;\n  transition:0.3s all;\n}\n.headerI{\n  color:#EE7E33;\n}\n.fixed{\n  position:absolute!important;\n  margin-top:40vh!important;\n  transition:0.3 all;\n}\n.overlay > a{\n  text-decoration: none;\n}\n@keyframes fadein {\nfrom { opacity: 1; }\nto   { opacity: 0.9; }\n}\n\n/* Firefox < 16 */\n@-moz-keyframes fadein {\nfrom { opacity: 1; }\nto   { opacity: 0.9; }\n}\n\n/* Safari, Chrome and Opera > 12.1 */\n@-webkit-keyframes fadein {\nfrom { opacity: 1; }\nto   { opacity: 0.9; }\n}\n\n/* Internet Explorer */\n@-ms-keyframes fadein {\nfrom { opacity: 1; }\nto   { opacity: 0.9; }\n}\n\n/* Opera < 12.1 */\n@-o-keyframes fadein {\nfrom { opacity: 1; }\nto   { opacity: 0.9; }\n}\n\n@keyframes fadeH1 {\nfrom { opacity: 0; }\nto   { opacity: 1; }\n}\n\n/* Firefox < 16 */\n@-moz-keyframes fadeH1 {\nfrom { opacity: 0; }\nto   { opacity: 1; }\n}\n\n/* Safari, Chrome and Opera > 12.1 */\n@-webkit-keyframes fadeH1 {\nfrom { opacity: 0; }\nto   { opacity: 1; }\n}\n\n/* Internet Explorer */\n@-ms-keyframes fadeH1 {\nfrom { opacity: 0; }\nto   { opacity: 1; }\n}\n\n/* Opera < 12.1 */\n@-o-keyframes fadeH1 {\nfrom { opacity: 0; }\nto   { opacity: 1; }\n}\n\n.header > img {\n  height:auto;\n  width:100vw;\n}\n", ""]);
-
-
-
-/***/ }),
-/* 31 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-
-var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-var _react = __webpack_require__(1);
-
-var _react2 = _interopRequireDefault(_react);
-
-var _reactDom = __webpack_require__(2);
-
-var _reactDom2 = _interopRequireDefault(_reactDom);
-
-__webpack_require__(32);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-var About = function (_React$Component) {
-  _inherits(About, _React$Component);
-
-  function About() {
-    _classCallCheck(this, About);
-
-    return _possibleConstructorReturn(this, (About.__proto__ || Object.getPrototypeOf(About)).apply(this, arguments));
-  }
-
-  _createClass(About, [{
-    key: 'render',
-    value: function render() {
-      return _react2.default.createElement(
-        'div',
-        { className: 'aboutWrapper' },
-        _react2.default.createElement(
-          'div',
-          { className: 'info' },
-          _react2.default.createElement(
-            'p',
-            null,
-            'Aliquam pretium mi non faucibus dapibus. Integer ac urna ante. Donec tortor tellus, pulvinar et nisi id, auctor elementum tellus. Cras sed metus non metus suscipit faucibus. Donec varius ex nec vehicula tincidunt. In tempor risus ut finibus aliquam. Vivamus ipsum enim, pulvinar vel urna non, gravida ultrices nisl. Suspendisse potenti. Pellentesque vel risus sed quam fermentum mattis in at nisi. Quisque odio dui, aliquet vitae nisl interdum, tincidunt lacinia arcu. Sed blandit ex placerat, luctus nibh in, convallis est. Duis vel egestas diam, ornare ultricies erat.'
-          )
-        )
-      );
-    }
-  }]);
-
-  return About;
-}(_react2.default.Component);
-
-exports.default = About;
-
-/***/ }),
-/* 32 */
-/***/ (function(module, exports, __webpack_require__) {
-
-
-var content = __webpack_require__(33);
-
-if(typeof content === 'string') content = [[module.i, content, '']];
-
-var transform;
-var insertInto;
-
-
-
-var options = {"hmr":true}
-
-options.transform = transform
-options.insertInto = undefined;
-
-var update = __webpack_require__(4)(content, options);
-
-if(content.locals) module.exports = content.locals;
-
-if(false) {
-	module.hot.accept("!!../../../node_modules/css-loader/dist/cjs.js!./style.css", function() {
-		var newContent = require("!!../../../node_modules/css-loader/dist/cjs.js!./style.css");
-
-		if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
-
-		var locals = (function(a, b) {
-			var key, idx = 0;
-
-			for(key in a) {
-				if(!b || a[key] !== b[key]) return false;
-				idx++;
-			}
-
-			for(key in b) idx--;
-
-			return idx === 0;
-		}(content.locals, newContent.locals));
-
-		if(!locals) throw new Error('Aborting CSS HMR due to changed css-modules locals.');
-
-		update(newContent);
-	});
-
-	module.hot.dispose(function() { update(); });
-}
-
-/***/ }),
-/* 33 */
-/***/ (function(module, exports, __webpack_require__) {
-
-exports = module.exports = __webpack_require__(3)(false);
-// Module
-exports.push([module.i, "", ""]);
-
-
-
-/***/ }),
-/* 34 */
-/***/ (function(module, exports, __webpack_require__) {
-
-
-var content = __webpack_require__(35);
+var content = __webpack_require__(38);
 
 if(typeof content === 'string') content = [[module.i, content, '']];
 
@@ -25460,7 +24936,7 @@ if(false) {
 }
 
 /***/ }),
-/* 35 */
+/* 38 */
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(3)(false);
@@ -25468,7 +24944,7 @@ exports = module.exports = __webpack_require__(3)(false);
 exports.push([module.i, "@import url(https://fonts.googleapis.com/css?family=Montserrat);", ""]);
 
 // Module
-exports.push([module.i, "html, body{\n  margin:0;\n  padding:0;\n  font-family:'Montserrat';\n  overflow-x: hidden;\n}\n\n.navbar{\n  color:black;\n  width: 100vw;\n  margin-bottom:5vh;\n  display: flex;\n  align-items: flex-start;\n  justify-content: flex-end;\n}\n.navbar > ul{\n  list-style: none;\n}\n.navbar > ul li{\n  display:inline;\n  padding-left:2vw;\n  padding-right:2vw;\n}\n", ""]);
+exports.push([module.i, "html, body{\n  margin:0;\n  padding:0;\n  font-family:'Montserrat';\n  overflow-x: hidden;\n}\n\n.navbar{\n  color:black;\n  width: 100vw;\n  margin-bottom:5vh;\n  display: flex;\n  align-items: flex-start;\n  justify-content: flex-end;\n}\n.navbar > ul{\n  list-style: none;\n}\n.navbar > ul li{\n  display:inline;\n  padding-left:2vw;\n  padding-right:2vw;\n}\n\n\n\n@media only screen and (max-width: 600px) {\n    .navbar{\n      justify-content: center;\n      margin-left: 0;\n    }\n}\n", ""]);
 
 
 

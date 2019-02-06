@@ -1,6 +1,6 @@
 .navbar{
   color:black;
-  width: 100vw;
+  width:100vw;
   margin-bottom:5vh;
   display: flex;
   align-items: flex-start;
@@ -25,20 +25,20 @@
   border:none;
   border-bottom:2px solid white;
 
-  transition:0.3s all;
+  transition:0.6s all;
 
 }
 .nav-button:focus{
   outline:none;
   border-bottom:2px solid orange;
-  transition:0.3s all;
+  transition:0.6s all;
 }
 .component-page{
   width:0;
   visibility: hidden;
   overflow:hidden;
   height:0;
-  transition:0.3s all;
+  transition:0.6s all;
 
 }
 .selected{
@@ -46,10 +46,34 @@
   height:auto;
   min-height:80vh;
   visibility: visible;
-  transition:0.3s all;
+  transition:0.6s all;
 
 }
-
+.aboutText{
+  margin-left:auto;
+  margin-right:auto;
+  height:auto;
+  width:70%;
+}
+/* .footer{
+  width:100vw;
+  background-color:#1E2222;
+}
+.footer > ul {
+  margin:0;
+  display:flex;
+  flex-direction: row;
+  list-style: none;
+}
+.footer > ul li{
+  display:flex;
+  flex-direction: row;
+  font-size:36px;
+  color:white;
+}
+.footer > a {
+  color:white;
+} */
 @media only screen and (max-width: 800px) {
 .selected{
   height:auto;

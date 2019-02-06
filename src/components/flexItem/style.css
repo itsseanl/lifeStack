@@ -55,7 +55,8 @@
   width:80vw;
 }
 .flexItem img{
-  height:50vh;
+  width:50vw;
+  height:auto;
 }
 .three{
   width:50vw!important
