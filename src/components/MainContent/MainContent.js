@@ -86,7 +86,6 @@ class MainContent extends React.Component {
         <p className="aboutText">Thanks Again!</p>
         <p className="aboutText">Sean</p>
       </div>
-      <
       </div>
     );
   }

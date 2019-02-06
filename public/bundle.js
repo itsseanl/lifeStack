@@ -24868,24 +24868,866 @@ module.exports = function (css) {
 
 /***/ }),
 /* 24 */
-/***/ (function(module, exports) {
+/***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-throw new Error("Module build failed: SyntaxError: Unexpected token (90:6)\n\n\u001b[0m \u001b[90m 88 | \u001b[39m      \u001b[33m<\u001b[39m\u001b[33m/\u001b[39m\u001b[33mdiv\u001b[39m\u001b[33m>\u001b[39m\n \u001b[90m 89 | \u001b[39m      \u001b[33m<\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 90 | \u001b[39m      \u001b[33m<\u001b[39m\u001b[33m/\u001b[39m\u001b[33mdiv\u001b[39m\u001b[33m>\u001b[39m\n \u001b[90m    | \u001b[39m      \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 91 | \u001b[39m    )\u001b[33m;\u001b[39m\n \u001b[90m 92 | \u001b[39m  }\n \u001b[90m 93 | \u001b[39m}\u001b[0m\n");
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _react = __webpack_require__(1);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _reactDom = __webpack_require__(2);
+
+var _reactDom2 = _interopRequireDefault(_reactDom);
+
+var _jsonProducts = __webpack_require__(25);
+
+var _jsonProducts2 = _interopRequireDefault(_jsonProducts);
+
+var _products = __webpack_require__(26);
+
+var _products2 = _interopRequireDefault(_products);
+
+var _Blog = __webpack_require__(32);
+
+var _Blog2 = _interopRequireDefault(_Blog);
+
+__webpack_require__(35);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var MainContent = function (_React$Component) {
+  _inherits(MainContent, _React$Component);
+
+  function MainContent(props) {
+    _classCallCheck(this, MainContent);
+
+    var _this = _possibleConstructorReturn(this, (MainContent.__proto__ || Object.getPrototypeOf(MainContent)).call(this, props));
+
+    _this.state = _jsonProducts2.default;
+    var showHideBlog = _this.state.componentVisible[0].blog ? "component-page selected" : "component-page";
+    var showHideProducts = _this.state.componentVisible[0].products ? "component-page selected" : "component-page";
+
+    return _this;
+  }
+
+  _createClass(MainContent, [{
+    key: 'handleClick',
+    value: function handleClick(page) {
+      console.log(page);
+      if (page == 'blog') {
+        this.setState({
+          componentVisible: [{
+            blog: true,
+            products: false,
+            about: false
+          }]
+        });
+
+        console.log('show blog');
+      } else if (page == 'products') {
+        this.setState({
+          componentVisible: [{
+            blog: false,
+            products: true,
+            about: false
+          }]
+        });
+
+        console.log('show products');
+      } else if (page == 'about') {
+        this.setState({
+          componentVisible: [{
+            blog: false,
+            products: false,
+            about: true
+          }]
+        });
+
+        console.log('show about');
+      }
+    }
+  }, {
+    key: 'render',
+    value: function render() {
+      var _this2 = this;
+
+      var showHideBlog = this.state.componentVisible[0].blog ? "component-page selected" : "component-page";
+      var showHideProducts = this.state.componentVisible[0].products ? "component-page selected" : "component-page";
+      var showHideAbout = this.state.componentVisible[0].about ? "component-page selected" : "component-page";
+
+      return _react2.default.createElement(
+        'div',
+        { className: 'main-wrapper' },
+        _react2.default.createElement(
+          'div',
+          { className: 'navbar' },
+          _react2.default.createElement(
+            'ul',
+            null,
+            _react2.default.createElement(
+              'button',
+              { className: 'nav-button', onClick: function onClick() {
+                  return _this2.handleClick('blog');
+                } },
+              _react2.default.createElement(
+                'li',
+                null,
+                'Blog'
+              )
+            ),
+            _react2.default.createElement(
+              'button',
+              { className: 'nav-button', onClick: function onClick() {
+                  return _this2.handleClick('products');
+                } },
+              _react2.default.createElement(
+                'li',
+                null,
+                'Products'
+              )
+            ),
+            _react2.default.createElement(
+              'button',
+              { className: 'nav-button', onClick: function onClick() {
+                  return _this2.handleClick('about');
+                } },
+              _react2.default.createElement(
+                'li',
+                null,
+                'About'
+              )
+            )
+          )
+        ),
+        _react2.default.createElement(
+          'div',
+          { className: showHideBlog },
+          _react2.default.createElement(_Blog2.default, { blogPosts: this.state.blog })
+        ),
+        _react2.default.createElement(
+          'div',
+          { className: showHideProducts },
+          _react2.default.createElement(_products2.default, { productList: this.state.products })
+        ),
+        _react2.default.createElement(
+          'div',
+          { className: showHideAbout },
+          _react2.default.createElement(
+            'p',
+            { className: 'aboutText' },
+            'Thanks for taking a moment to look around! lifeStack is a cross between a blog and an e-commerce site, as well as a fun way to practice my web dev skills (this is my first site built with react!).'
+          ),
+          _react2.default.createElement(
+            'p',
+            { className: 'aboutText' },
+            'My goal is to share what technology I use on a daily basis, how I use it for work as a web dev and beyond, and occasional blog posts on an assortment of topics from web dev to tips on the latest game I\u2019m playing.'
+          ),
+          _react2.default.createElement(
+            'p',
+            { className: 'aboutText' },
+            'If that sounds like it might float your boat, stick around for a while! Once I work out all the code and flesh out my product write-ups I\u2019ll be hoping to post frequently on here about my journey with web development, as well as implement some slick new features as I learn.'
+          ),
+          _react2.default.createElement(
+            'p',
+            { className: 'aboutText' },
+            'Thanks Again!'
+          ),
+          _react2.default.createElement(
+            'p',
+            { className: 'aboutText' },
+            'Sean'
+          )
+        )
+      );
+    }
+  }]);
+
+  return MainContent;
+}(_react2.default.Component);
+
+exports.default = MainContent;
 
 /***/ }),
-/* 25 */,
-/* 26 */,
-/* 27 */,
-/* 28 */,
-/* 29 */,
-/* 30 */,
-/* 31 */,
-/* 32 */,
-/* 33 */,
-/* 34 */,
-/* 35 */,
-/* 36 */,
+/* 25 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+var jsonProducts = {
+  "componentVisible": [{
+    "blog": true,
+    "products": false,
+    "about": false
+  }],
+  "blog": [{
+    "title": "Welcome!",
+    "date": "February 6th, 2019",
+    "img": "/images/desk.jpg",
+    "previewText": "Aliquam vel metus faucibus, bibendum erat malesuada, condimentum...",
+    "text": "Aliquam vel metus faucibus, bibendum erat malesuada, condimentum velit. Vivamus ex ligula, ultrices a pulvinar ac, venenatis ac ligula. Donec semper laoreet dui. Morbi faucibus sagittis pellentesque. Fusce id metus ac magna eleifend varius at quis lectus. Sed pellentesque ex at dolor hendrerit sollicitudin dictum et nulla. Aliquam rhoncus justo elit, non tincidunt nibh placerat id. Vestibulum vestibulum condimentum orci, quis tempus ipsum pharetra at. Proin tristique pretium mollis. Praesent metus sapien, facilisis in lectus ut, maximus varius erat."
+
+  }, {
+    "title": "placeholder",
+    "date": "February 6th, 2019",
+    "img": "/images/desk.jpg",
+    "previewText": "Aliquam vel metus faucibus, bibendum erat malesuada, condimentum...",
+    "text": "Aliquam vel metus faucibus, bibendum erat malesuada, condimentum velit. Vivamus ex ligula, ultrices a pulvinar ac, venenatis ac ligula. Donec semper laoreet dui. Morbi faucibus sagittis pellentesque. Fusce id metus ac magna eleifend varius at quis lectus. Sed pellentesque ex at dolor hendrerit sollicitudin dictum et nulla. Aliquam rhoncus justo elit, non tincidunt nibh placerat id. Vestibulum vestibulum condimentum orci, quis tempus ipsum pharetra at. Proin tristique pretium mollis. Praesent metus sapien, facilisis in lectus ut, maximus varius erat."
+
+  }, {
+    "title": "placeholder",
+    "date": "February 6th, 2019",
+    "img": "/images/desk.jpg",
+    "previewText": "Aliquam vel metus faucibus, bibendum erat malesuada, condimentum...",
+    "text": "Aliquam vel metus faucibus, bibendum erat malesuada, condimentum velit. Vivamus ex ligula, ultrices a pulvinar ac, venenatis ac ligula. Donec semper laoreet dui. Morbi faucibus sagittis pellentesque. Fusce id metus ac magna eleifend varius at quis lectus. Sed pellentesque ex at dolor hendrerit sollicitudin dictum et nulla. Aliquam rhoncus justo elit, non tincidunt nibh placerat id. Vestibulum vestibulum condimentum orci, quis tempus ipsum pharetra at. Proin tristique pretium mollis. Praesent metus sapien, facilisis in lectus ut, maximus varius erat."
+
+  }, {
+    "title": "placeholder",
+    "date": "February 6th, 2019",
+    "img": "/images/desk.jpg",
+    "previewText": "Aliquam vel metus faucibus, bibendum erat malesuada, condimentum...",
+    "text": "Aliquam vel metus faucibus, bibendum erat malesuada, condimentum velit. Vivamus ex ligula, ultrices a pulvinar ac, venenatis ac ligula. Donec semper laoreet dui. Morbi faucibus sagittis pellentesque. Fusce id metus ac magna eleifend varius at quis lectus. Sed pellentesque ex at dolor hendrerit sollicitudin dictum et nulla. Aliquam rhoncus justo elit, non tincidunt nibh placerat id. Vestibulum vestibulum condimentum orci, quis tempus ipsum pharetra at. Proin tristique pretium mollis. Praesent metus sapien, facilisis in lectus ut, maximus varius erat."
+
+  }],
+  "products": [{
+    "name": "Macbook Air",
+    "price": "$999",
+    "description": "Aliquam pretium mi non faucibus dapibus. Integer ac urna ante. Donec tortor tellus, pulvinar et nisi id, auctor elementum tellus. Cras sed metus non metus suscipit faucibus. Donec varius ex nec vehicula tincidunt. In tempor risus ut finibus aliquam. Vivamus ipsum enim, pulvinar vel urna non, gravida ultrices nisl. Suspendisse potenti. Pellentesque vel risus sed quam fermentum mattis in at nisi. Quisque odio dui, aliquet vitae nisl interdum, tincidunt lacinia arcu. Sed blandit ex placerat, luctus nibh in, convallis est. Duis vel egestas diam, ornare ultricies erat",
+    "image": "images/mba.png"
+  }, {
+    "name": "Custom Build",
+    "price": "$780",
+    "description": "Aliquam pretium mi non faucibus dapibus. Integer ac urna ante. Donec tortor tellus, pulvinar et nisi id, auctor elementum tellus. Cras sed metus non metus suscipit faucibus. Donec varius ex nec vehicula tincidunt. In tempor risus ut finibus aliquam. Vivamus ipsum enim, pulvinar vel urna non, gravida ultrices nisl. Suspendisse potenti. Pellentesque vel risus sed quam fermentum mattis in at nisi. Quisque odio dui, aliquet vitae nisl interdum, tincidunt lacinia arcu. Sed blandit ex placerat, luctus nibh in, convallis est. Duis vel egestas diam, ornare ultricies erat",
+    "image": "images/carbide400c.png"
+  }, {
+    "name": "HP 25es IPS FHD",
+    "price": "$150",
+    "description": "Aliquam pretium mi non faucibus dapibus. Integer ac urna ante. Donec tortor tellus, pulvinar et nisi id, auctor elementum tellus. Cras sed metus non metus suscipit faucibus. Donec varius ex nec vehicula tincidunt. In tempor risus ut finibus aliquam. Vivamus ipsum enim, pulvinar vel urna non, gravida ultrices nisl. Suspendisse potenti. Pellentesque vel risus sed quam fermentum mattis in at nisi. Quisque odio dui, aliquet vitae nisl interdum, tincidunt lacinia arcu. Sed blandit ex placerat, luctus nibh in, convallis est. Duis vel egestas diam, ornare ultricies erat",
+    "image": "images/hp25es.png"
+  }, {
+    "name": "iPad 6th Gen",
+    "price": "$329",
+    "description": "Aliquam pretium mi non faucibus dapibus. Integer ac urna ante. Donec tortor tellus, pulvinar et nisi id, auctor elementum tellus. Cras sed metus non metus suscipit faucibus. Donec varius ex nec vehicula tincidunt. In tempor risus ut finibus aliquam. Vivamus ipsum enim, pulvinar vel urna non, gravida ultrices nisl. Suspendisse potenti. Pellentesque vel risus sed quam fermentum mattis in at nisi. Quisque odio dui, aliquet vitae nisl interdum, tincidunt lacinia arcu. Sed blandit ex placerat, luctus nibh in, convallis est. Duis vel egestas diam, ornare ultricies erat",
+    "image": "images/ipad.png"
+  }, {
+    "name": "Logitech K840 Mechanical Keyboard",
+    "price": "$70",
+    "description": "Aliquam pretium mi non faucibus dapibus. Integer ac urna ante. Donec tortor tellus, pulvinar et nisi id, auctor elementum tellus. Cras sed metus non metus suscipit faucibus. Donec varius ex nec vehicula tincidunt. In tempor risus ut finibus aliquam. Vivamus ipsum enim, pulvinar vel urna non, gravida ultrices nisl. Suspendisse potenti. Pellentesque vel risus sed quam fermentum mattis in at nisi. Quisque odio dui, aliquet vitae nisl interdum, tincidunt lacinia arcu. Sed blandit ex placerat, luctus nibh in, convallis est. Duis vel egestas diam, ornare ultricies erat",
+    "image": "images/k840.png"
+  }, {
+    "name": "Logitech M570 Trackball Mouse",
+    "price": "$50",
+    "description": "Aliquam pretium mi non faucibus dapibus. Integer ac urna ante. Donec tortor tellus, pulvinar et nisi id, auctor elementum tellus. Cras sed metus non metus suscipit faucibus. Donec varius ex nec vehicula tincidunt. In tempor risus ut finibus aliquam. Vivamus ipsum enim, pulvinar vel urna non, gravida ultrices nisl. Suspendisse potenti. Pellentesque vel risus sed quam fermentum mattis in at nisi. Quisque odio dui, aliquet vitae nisl interdum, tincidunt lacinia arcu. Sed blandit ex placerat, luctus nibh in, convallis est. Duis vel egestas diam, ornare ultricies erat",
+    "image": "images/m570.png"
+  }, {
+    "name": "Pixel 2 XL",
+    "price": "$850",
+    "description": "Aliquam pretium mi non faucibus dapibus. Integer ac urna ante. Donec tortor tellus, pulvinar et nisi id, auctor elementum tellus. Cras sed metus non metus suscipit faucibus. Donec varius ex nec vehicula tincidunt. In tempor risus ut finibus aliquam. Vivamus ipsum enim, pulvinar vel urna non, gravida ultrices nisl. Suspendisse potenti. Pellentesque vel risus sed quam fermentum mattis in at nisi. Quisque odio dui, aliquet vitae nisl interdum, tincidunt lacinia arcu. Sed blandit ex placerat, luctus nibh in, convallis est. Duis vel egestas diam, ornare ultricies erat",
+    "image": "images/pixel2xl.png"
+  }, {
+    "name": "TCL 49' 4k HDR TV",
+    "price": "$270",
+    "description": "Aliquam pretium mi non faucibus dapibus. Integer ac urna ante. Donec tortor tellus, pulvinar et nisi id, auctor elementum tellus. Cras sed metus non metus suscipit faucibus. Donec varius ex nec vehicula tincidunt. In tempor risus ut finibus aliquam. Vivamus ipsum enim, pulvinar vel urna non, gravida ultrices nisl. Suspendisse potenti. Pellentesque vel risus sed quam fermentum mattis in at nisi. Quisque odio dui, aliquet vitae nisl interdum, tincidunt lacinia arcu. Sed blandit ex placerat, luctus nibh in, convallis est. Duis vel egestas diam, ornare ultricies erat",
+    "image": "images/tcl49.png"
+  }, {
+    "name": "Logitech z533 Desktop Speakers",
+    "price": "$100",
+    "description": "Aliquam pretium mi non faucibus dapibus. Integer ac urna ante. Donec tortor tellus, pulvinar et nisi id, auctor elementum tellus. Cras sed metus non metus suscipit faucibus. Donec varius ex nec vehicula tincidunt. In tempor risus ut finibus aliquam. Vivamus ipsum enim, pulvinar vel urna non, gravida ultrices nisl. Suspendisse potenti. Pellentesque vel risus sed quam fermentum mattis in at nisi. Quisque odio dui, aliquet vitae nisl interdum, tincidunt lacinia arcu. Sed blandit ex placerat, luctus nibh in, convallis est. Duis vel egestas diam, ornare ultricies erat",
+    "image": "images/z533.png"
+  }]
+};
+
+exports.default = jsonProducts;
+
+/***/ }),
+/* 26 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _react = __webpack_require__(1);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _reactDom = __webpack_require__(2);
+
+var _reactDom2 = _interopRequireDefault(_reactDom);
+
+var _Modal = __webpack_require__(27);
+
+var _Modal2 = _interopRequireDefault(_Modal);
+
+__webpack_require__(30);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var Products = function (_React$Component) {
+  _inherits(Products, _React$Component);
+
+  function Products() {
+    _classCallCheck(this, Products);
+
+    var _this = _possibleConstructorReturn(this, (Products.__proto__ || Object.getPrototypeOf(Products)).call(this));
+
+    _this.state = {
+      modal: [{
+        show: false,
+        name: '',
+        price: '',
+        description: '',
+        image: ''
+      }]
+    };
+    return _this;
+  }
+
+  _createClass(Products, [{
+    key: 'showModal',
+    value: function showModal(name, price, description, image) {
+      this.setState({
+        modal: [{
+          show: true,
+          name: name,
+          price: price,
+          description: description,
+          image: image
+        }]
+      });
+    }
+  }, {
+    key: 'hideModal',
+    value: function hideModal() {
+      var newState = this.state;
+      console.log(newState);
+      newState.modal[0].show = false;
+      this.setState(newState);
+    }
+  }, {
+    key: 'handleClick',
+    value: function handleClick() {
+      alert('clicked');
+    }
+  }, {
+    key: 'render',
+    value: function render() {
+      var _this2 = this;
+
+      return _react2.default.createElement(
+        'div',
+        { className: 'wrapper' },
+        _react2.default.createElement(_Modal2.default, { info: this.state.modal, handleClose: this.hideModal.bind(this), showModal: this.showModal.bind(this) }),
+        this.props.productList.map(function (_ref) {
+          var name = _ref.name,
+              price = _ref.price,
+              description = _ref.description,
+              image = _ref.image;
+          return _react2.default.createElement(
+            'button',
+            { className: 'btnModal', onClick: function onClick() {
+                return _this2.showModal(name, price, description, image);
+              } },
+            _react2.default.createElement(
+              'div',
+              { className: 'flexItem' },
+              _react2.default.createElement('img', { key: image, src: image, className: 'img' }),
+              _react2.default.createElement(
+                'p',
+                { key: name },
+                name
+              ),
+              _react2.default.createElement(
+                'p',
+                { key: price },
+                price
+              )
+            )
+          );
+        })
+      );
+    }
+  }]);
+
+  return Products;
+}(_react2.default.Component);
+
+exports.default = Products;
+
+/***/ }),
+/* 27 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _react = __webpack_require__(1);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _reactDom = __webpack_require__(2);
+
+var _reactDom2 = _interopRequireDefault(_reactDom);
+
+__webpack_require__(28);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var Modal = function Modal(_ref) {
+  var info = _ref.info,
+      handleClose = _ref.handleClose,
+      showModal = _ref.showModal;
+
+  console.log(info);
+  var showHideClassName = info[0].show ? "modal modalOn" : "modal modalOff";
+
+  return _react2.default.createElement(
+    'div',
+    { className: showHideClassName },
+    _react2.default.createElement(
+      'div',
+      { className: 'modalContent' },
+      _react2.default.createElement(
+        'div',
+        { className: 'modalImage' },
+        _react2.default.createElement('img', { src: info[0].image })
+      ),
+      _react2.default.createElement(
+        'div',
+        { className: 'modalText' },
+        _react2.default.createElement(
+          'h1',
+          { className: 'item' },
+          info[0].name
+        ),
+        _react2.default.createElement(
+          'h3',
+          { className: 'price' },
+          info[0].price
+        ),
+        _react2.default.createElement(
+          'p',
+          { className: 'description' },
+          info[0].description
+        )
+      ),
+      _react2.default.createElement(
+        'button',
+        { className: 'btnClose', onClick: handleClose },
+        _react2.default.createElement('i', { 'class': 'fas fa-times' })
+      )
+    )
+  );
+};
+
+exports.default = Modal;
+
+/***/ }),
+/* 28 */
+/***/ (function(module, exports, __webpack_require__) {
+
+
+var content = __webpack_require__(29);
+
+if(typeof content === 'string') content = [[module.i, content, '']];
+
+var transform;
+var insertInto;
+
+
+
+var options = {"hmr":true}
+
+options.transform = transform
+options.insertInto = undefined;
+
+var update = __webpack_require__(4)(content, options);
+
+if(content.locals) module.exports = content.locals;
+
+if(false) {
+	module.hot.accept("!!../../../node_modules/css-loader/dist/cjs.js!./style.css", function() {
+		var newContent = require("!!../../../node_modules/css-loader/dist/cjs.js!./style.css");
+
+		if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+
+		var locals = (function(a, b) {
+			var key, idx = 0;
+
+			for(key in a) {
+				if(!b || a[key] !== b[key]) return false;
+				idx++;
+			}
+
+			for(key in b) idx--;
+
+			return idx === 0;
+		}(content.locals, newContent.locals));
+
+		if(!locals) throw new Error('Aborting CSS HMR due to changed css-modules locals.');
+
+		update(newContent);
+	});
+
+	module.hot.dispose(function() { update(); });
+}
+
+/***/ }),
+/* 29 */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(3)(false);
+// Imports
+exports.push([module.i, "@import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro);", ""]);
+
+// Module
+exports.push([module.i, ".modal {\n z-index:1;\n transition: all 0.5s;\n display: block;\n opacity:1; /* Hidden by default */\n position: fixed; /* Stay in place */\n z-index: 1; /* Sit on top */\n left: 0;\n top: 0;\n width: 100%; /* Full width */\n height:0; /* Full height */\n overflow: auto; /* Enable scroll if needed */\n background-color: rgb(0,0,0); /* Fallback color */\n background-color: white; /* Black w/ opacity */\n}\n\n.modalOn {\n  height: 100%;\n  overflow:hidden;\n}\n.modalOff {\n  height: 0;\n}\n.modalContent{\n  font-family: 'Source Sans Pro', sans-serif;\n  display:flex;\n  flex-direction: row;\n  width:100vw;\n  height:100vh;\n  justify-content: center;\n  align-content: center;\n  flex: 1 0 auto;\n}\n.modalImage{\n  width:50vw;\n  height:100vh;\n  display:flex;\n  align-items: center;\n  justify-content: center;\n  /* background-color:rgb(78,223,221); */\n  background-color:rgba(6, 10, 10, 0.9);\n  border-right: 2px solid #EE7E33;\n\n}\n.modalImage img{\n  height:50%;\n}\n.modalText{\n  display:flex;\n  width:50vw;\n  flex-direction: column;\n  padding-left: 5vw;\n  justify-content: center;\n  height:100vh;\n}\n.item{\n  font-size:2em;\n}\n\n.btnClose{\n  height:7vw;\n  width:7vw;\n  font-size:1rem;\n  color:#787878;\n  border:none;\n  border-bottom-left-radius:8px;\n  transition:0.3s all;\n\n}\n\n.btnClose:hover{\n  font-size:1.5rem;\n  color:#EE7E33;\n  transition:0.3s all;\n}\n\n.btnClose:focus{\n  outline:none;\n}\n\n@media only screen and (max-width: 800px) {\n  .modalContent{\n    flex-direction: column;\n  }\n  .modalImage{\n    width:100vw;\n    height:30vh;\n  }\n  .img{\n    height:auto;\n    width:50vh;\n  }\n  .modalText{\n    width:90vw;\n    height:70vh;\n  }\n  .btnClose{\n    position: absolute;\n    top: 0;\n    right: 0;\n  }\n}\n", ""]);
+
+
+
+/***/ }),
+/* 30 */
+/***/ (function(module, exports, __webpack_require__) {
+
+
+var content = __webpack_require__(31);
+
+if(typeof content === 'string') content = [[module.i, content, '']];
+
+var transform;
+var insertInto;
+
+
+
+var options = {"hmr":true}
+
+options.transform = transform
+options.insertInto = undefined;
+
+var update = __webpack_require__(4)(content, options);
+
+if(content.locals) module.exports = content.locals;
+
+if(false) {
+	module.hot.accept("!!../../../node_modules/css-loader/dist/cjs.js!./style.css", function() {
+		var newContent = require("!!../../../node_modules/css-loader/dist/cjs.js!./style.css");
+
+		if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+
+		var locals = (function(a, b) {
+			var key, idx = 0;
+
+			for(key in a) {
+				if(!b || a[key] !== b[key]) return false;
+				idx++;
+			}
+
+			for(key in b) idx--;
+
+			return idx === 0;
+		}(content.locals, newContent.locals));
+
+		if(!locals) throw new Error('Aborting CSS HMR due to changed css-modules locals.');
+
+		update(newContent);
+	});
+
+	module.hot.dispose(function() { update(); });
+}
+
+/***/ }),
+/* 31 */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(3)(false);
+// Imports
+exports.push([module.i, "@import url(https://fonts.googleapis.com/css?family=Montserrat);", ""]);
+
+// Module
+exports.push([module.i, ".flexItem {\n width : 15vw;\n margin: 1vw;\n border-radius: 0px;\n display: flex;\n flex-direction: column;\n flex-wrap: wrap;\n flex: 1 1 auto;\n align-items: center;\n justify-content: center;\n color: black;\n padding: 5px;\n background-color:white;\n transition: 0.3s all;\n border-bottom:3px solid white;\n font-family:'Montserrat', sans-serif;\n\n}\n.flexItem:hover{\n  border-bottom:3px solid #EE7E33;\n  transition: 0.3s all;\n}\n.wrapper {\n display: flex;\n flex-direction: row;\n justify-content: center;\n flex: 1 0 auto;\n flex-wrap: wrap;\n margin:20px;\n}\n.img {\n width : auto;\n height: 10vw;\n}\n.btnModal {\n border:none;\n background-color:white;\n}\n.btnModal:focus{\n  outline:none;\n}\n\n@media only screen and (max-width: 800px) {\n  .flexItem{\n    width:30vw;\n  }\n  .img{\n    height:15vh;\n  }\n\n\n.flexItem{\n  width:80vw;\n}\n.flexItem img{\n  width:50vw;\n  height:auto;\n}\n.three{\n  width:50vw!important\n}\n}\n", ""]);
+
+
+
+/***/ }),
+/* 32 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _react = __webpack_require__(1);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _reactDom = __webpack_require__(2);
+
+var _reactDom2 = _interopRequireDefault(_reactDom);
+
+__webpack_require__(33);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var Blog = function (_React$Component) {
+  _inherits(Blog, _React$Component);
+
+  function Blog() {
+    _classCallCheck(this, Blog);
+
+    return _possibleConstructorReturn(this, (Blog.__proto__ || Object.getPrototypeOf(Blog)).apply(this, arguments));
+  }
+
+  _createClass(Blog, [{
+    key: 'render',
+    value: function render() {
+      return _react2.default.createElement(
+        'div',
+        { className: 'about-wrapper' },
+        this.props.blogPosts.slice(0, 1).map(function (_ref) {
+          var title = _ref.title,
+              date = _ref.date,
+              img = _ref.img,
+              previewText = _ref.previewText,
+              text = _ref.text;
+          return _react2.default.createElement(
+            'div',
+            { id: 'leftDiv', className: 'left' },
+            _react2.default.createElement('img', { key: img, src: img }),
+            _react2.default.createElement(
+              'div',
+              { className: 'left-info' },
+              _react2.default.createElement(
+                'h1',
+                { key: title },
+                title
+              ),
+              _react2.default.createElement(
+                'p',
+                { key: date },
+                date
+              ),
+              _react2.default.createElement(
+                'p',
+                { key: previewText },
+                previewText
+              )
+            )
+          );
+        }),
+        _react2.default.createElement(
+          'div',
+          { className: 'right' },
+          this.props.blogPosts.slice(1, 4).map(function (_ref2) {
+            var title = _ref2.title,
+                date = _ref2.date,
+                img = _ref2.img,
+                previewText = _ref2.previewText,
+                text = _ref2.text;
+            return _react2.default.createElement(
+              'div',
+              { className: 'post' },
+              _react2.default.createElement(
+                'div',
+                { className: 'post-img' },
+                _react2.default.createElement('img', _defineProperty({ src: img }, 'src', img))
+              ),
+              _react2.default.createElement(
+                'div',
+                { className: 'post-info' },
+                _react2.default.createElement(
+                  'h1',
+                  { key: title },
+                  title
+                ),
+                _react2.default.createElement(
+                  'p',
+                  { key: date },
+                  date
+                ),
+                _react2.default.createElement(
+                  'p',
+                  { key: previewText },
+                  previewText
+                )
+              )
+            );
+          })
+        )
+      );
+    }
+  }]);
+
+  return Blog;
+}(_react2.default.Component);
+
+exports.default = Blog;
+
+/***/ }),
+/* 33 */
+/***/ (function(module, exports, __webpack_require__) {
+
+
+var content = __webpack_require__(34);
+
+if(typeof content === 'string') content = [[module.i, content, '']];
+
+var transform;
+var insertInto;
+
+
+
+var options = {"hmr":true}
+
+options.transform = transform
+options.insertInto = undefined;
+
+var update = __webpack_require__(4)(content, options);
+
+if(content.locals) module.exports = content.locals;
+
+if(false) {
+	module.hot.accept("!!../../../node_modules/css-loader/dist/cjs.js!./style.css", function() {
+		var newContent = require("!!../../../node_modules/css-loader/dist/cjs.js!./style.css");
+
+		if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+
+		var locals = (function(a, b) {
+			var key, idx = 0;
+
+			for(key in a) {
+				if(!b || a[key] !== b[key]) return false;
+				idx++;
+			}
+
+			for(key in b) idx--;
+
+			return idx === 0;
+		}(content.locals, newContent.locals));
+
+		if(!locals) throw new Error('Aborting CSS HMR due to changed css-modules locals.');
+
+		update(newContent);
+	});
+
+	module.hot.dispose(function() { update(); });
+}
+
+/***/ }),
+/* 34 */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(3)(false);
+// Module
+exports.push([module.i, ".about-wrapper{\npadding-top:10vh;\ndisplay:flex;\nflex-direction: row;\nwidth:100vw;\nmax-width:100%;\nheight:80vh;\nflex:1;\nmargin: 0 auto;\npadding-top:5vh;\npadding-bottom: 5vh;\n}\n.left, .right{\ndisplay:flex;\nflex-direction:column;\nheight:70vh;\nwidth:50vw;\n}\n\n.left{\nmargin-left:5vw;\nwidth:45vw;\ndisplay: flex;\nflex-direction: column;\nalign-items: baseline;\njustify-content: flex-end;\noverflow:hidden;\n}\n.left > img {\n  height:100%;\n  width:100%;\n  object-fit:cover;\n\n}\n\n.left-info{\n  background-color:white;\n}\n.right{\nwidth:35vw;\nflex-grow: 0;\nmargin-right:auto;\n}\n.left-img{\nwidth:40vw;\nheight:auto;\n}\n\n.post{\npadding:5px;\nheight:33%;\npadding-top:0px;\ndisplay:flex;\nflex-direction: row;\n}\n.post-img > img{\n  height: 100%;\n  width: auto;\n  object-fit: contain;\n}\n.post-info{\npadding:5px;\n\n}\n.post-info h1{\n  margin:0;\n}\n\n@media only screen and (max-width: 800px) {\n.about-wrapper{\n  flex-direction: column;\n  height:auto;\n}\n.left, .right{\n  width:100vw;\n  height:auto;\n  padding:0;\n}\n.left{\n  height:40vh;\n  margin-left: 0;\n}\n.post{\n  flex-direction: column;\n  padding:0;\n}\n.post-img > img{\n  width:100vw;\n  height:30vh;\n  object-fit: cover;\n}\n}\n", ""]);
+
+
+
+/***/ }),
+/* 35 */
+/***/ (function(module, exports, __webpack_require__) {
+
+
+var content = __webpack_require__(36);
+
+if(typeof content === 'string') content = [[module.i, content, '']];
+
+var transform;
+var insertInto;
+
+
+
+var options = {"hmr":true}
+
+options.transform = transform
+options.insertInto = undefined;
+
+var update = __webpack_require__(4)(content, options);
+
+if(content.locals) module.exports = content.locals;
+
+if(false) {
+	module.hot.accept("!!../../../node_modules/css-loader/dist/cjs.js!./style.css", function() {
+		var newContent = require("!!../../../node_modules/css-loader/dist/cjs.js!./style.css");
+
+		if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+
+		var locals = (function(a, b) {
+			var key, idx = 0;
+
+			for(key in a) {
+				if(!b || a[key] !== b[key]) return false;
+				idx++;
+			}
+
+			for(key in b) idx--;
+
+			return idx === 0;
+		}(content.locals, newContent.locals));
+
+		if(!locals) throw new Error('Aborting CSS HMR due to changed css-modules locals.');
+
+		update(newContent);
+	});
+
+	module.hot.dispose(function() { update(); });
+}
+
+/***/ }),
+/* 36 */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(3)(false);
+// Module
+exports.push([module.i, ".navbar{\n  color:black;\n  width:100vw;\n  margin-bottom:5vh;\n  display: flex;\n  align-items: flex-start;\n  justify-content: center;\n}\n.navbar > ul{\n  list-style: none;\n  display: flex;\n  justify-content: center;\n  width: 100%;\n  padding-left:0;\n}\n.navbar > ul li{\n  display:inline;\n  padding-left:2vw;\n  padding-right:2vw;\n}\n\n.nav-button{\n  background-color: none;\n  border:0;\n  border:none;\n  border-bottom:2px solid white;\n\n  transition:0.6s all;\n\n}\n.nav-button:focus{\n  outline:none;\n  border-bottom:2px solid orange;\n  transition:0.6s all;\n}\n.component-page{\n  width:0;\n  visibility: hidden;\n  overflow:hidden;\n  height:0;\n  transition:0.6s all;\n\n}\n.selected{\n  width:100%;\n  height:auto;\n  min-height:80vh;\n  visibility: visible;\n  transition:0.6s all;\n\n}\n.aboutText{\n  margin-left:auto;\n  margin-right:auto;\n  height:auto;\n  width:70%;\n}\n/* .footer{\n  width:100vw;\n  background-color:#1E2222;\n}\n.footer > ul {\n  margin:0;\n  display:flex;\n  flex-direction: row;\n  list-style: none;\n}\n.footer > ul li{\n  display:flex;\n  flex-direction: row;\n  font-size:36px;\n  color:white;\n}\n.footer > a {\n  color:white;\n} */\n@media only screen and (max-width: 800px) {\n.selected{\n  height:auto;\n}\n}\n", ""]);
+
+
+
+/***/ }),
 /* 37 */
 /***/ (function(module, exports, __webpack_require__) {
 
