@@ -58,8 +58,8 @@ flex-direction: row;
 }
 .post-img > img{
   height: 100%;
-  width: auto;
-  object-fit: contain;
+  width: 100%;
+  object-fit: cover;
 }
 .post-info{
 padding:5px;
