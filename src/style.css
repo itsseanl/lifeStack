@@ -7,23 +7,6 @@ html, body{
   overflow-x: hidden;
 }
 
-.navbar{
-  color:black;
-  width: 100vw;
-  margin-bottom:5vh;
-  display: flex;
-  align-items: flex-start;
-  justify-content: flex-end;
-}
-.navbar > ul{
-  list-style: none;
-}
-.navbar > ul li{
-  display:inline;
-  padding-left:2vw;
-  padding-right:2vw;
-}
-
 
 
 @media only screen and (max-width: 600px) {
