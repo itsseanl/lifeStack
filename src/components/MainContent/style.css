@@ -20,19 +20,24 @@
 }
 
 .nav-button{
-  background-color: none;
-  border:0;
-  border:none;
+  background-color: white;
+  border-left:0;
+  border-top:0;
+  border-right:0;
   border-bottom:2px solid white;
 
   transition:0.6s all;
-
 }
 .nav-button:focus{
   outline:none;
   border-bottom:2px solid orange;
+  -moz-border-bottom-colors: orange;
   transition:0.6s all;
 }
+button:active{
+  color:black;
+}
+
 .component-page{
   width:0;
   visibility: hidden;

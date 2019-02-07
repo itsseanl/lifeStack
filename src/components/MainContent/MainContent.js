@@ -15,6 +15,7 @@ class MainContent extends React.Component {
   }
   handleClick(page){
     console.log(page);
+    document.getElementById('blogBtn').focus();
     if (page == 'blog'){
       this.setState({
         componentVisible:[
@@ -29,6 +30,8 @@ class MainContent extends React.Component {
       console.log('show blog');
     }
     else if (page == 'products'){
+      document.getElementById('productsBtn').focus();
+
       this.setState({
         componentVisible:[
           {
@@ -42,6 +45,8 @@ class MainContent extends React.Component {
       console.log('show products');
     }
     else if (page == 'about'){
+      document.getElementById('aboutBtn').focus();
+
       this.setState({
         componentVisible:[
           {
@@ -65,9 +70,9 @@ class MainContent extends React.Component {
       <div className="main-wrapper">
       <div className="navbar">
         <ul>
-          <button className="nav-button" onClick={() => this.handleClick('blog')}><li>Blog</li></button>
-          <button className="nav-button" onClick={() => this.handleClick('products')}><li>Products</li></button>
-          <button className="nav-button" onClick={() => this.handleClick('about')}><li>About</li></button>
+          <button className="nav-button" id="blogBtn" onClick={() => this.handleClick('blog')}><li>Blog</li></button>
+          <button className="nav-button" id="productsBtn" onClick={() => this.handleClick('products')}><li>Products</li></button>
+          <button className="nav-button" id="aboutBtn" onClick={() => this.handleClick('about')}><li>About</li></button>
         </ul>
       </div>
       <div className={ showHideBlog }>
@@ -86,6 +91,7 @@ class MainContent extends React.Component {
         <p className="aboutText">Thanks Again!</p>
         <p className="aboutText">Sean</p>
       </div>
+
       </div>
     );
   }

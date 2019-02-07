@@ -24928,6 +24928,7 @@ var MainContent = function (_React$Component) {
     key: 'handleClick',
     value: function handleClick(page) {
       console.log(page);
+      document.getElementById('blogBtn').focus();
       if (page == 'blog') {
         this.setState({
           componentVisible: [{
@@ -24939,6 +24940,8 @@ var MainContent = function (_React$Component) {
 
         console.log('show blog');
       } else if (page == 'products') {
+        document.getElementById('productsBtn').focus();
+
         this.setState({
           componentVisible: [{
             blog: false,
@@ -24949,6 +24952,8 @@ var MainContent = function (_React$Component) {
 
         console.log('show products');
       } else if (page == 'about') {
+        document.getElementById('aboutBtn').focus();
+
         this.setState({
           componentVisible: [{
             blog: false,
@@ -24980,7 +24985,7 @@ var MainContent = function (_React$Component) {
             null,
             _react2.default.createElement(
               'button',
-              { className: 'nav-button', onClick: function onClick() {
+              { className: 'nav-button', id: 'blogBtn', onClick: function onClick() {
                   return _this2.handleClick('blog');
                 } },
               _react2.default.createElement(
@@ -24991,7 +24996,7 @@ var MainContent = function (_React$Component) {
             ),
             _react2.default.createElement(
               'button',
-              { className: 'nav-button', onClick: function onClick() {
+              { className: 'nav-button', id: 'productsBtn', onClick: function onClick() {
                   return _this2.handleClick('products');
                 } },
               _react2.default.createElement(
@@ -25002,7 +25007,7 @@ var MainContent = function (_React$Component) {
             ),
             _react2.default.createElement(
               'button',
-              { className: 'nav-button', onClick: function onClick() {
+              { className: 'nav-button', id: 'aboutBtn', onClick: function onClick() {
                   return _this2.handleClick('about');
                 } },
               _react2.default.createElement(
@@ -25663,7 +25668,7 @@ if(false) {
 
 exports = module.exports = __webpack_require__(3)(false);
 // Module
-exports.push([module.i, ".about-wrapper{\npadding-top:10vh;\ndisplay:flex;\nflex-direction: row;\nwidth:100vw;\nmax-width:100%;\nheight:80vh;\nflex:1;\nmargin: 0 auto;\npadding-top:5vh;\npadding-bottom: 5vh;\n}\n.left, .right{\ndisplay:flex;\nflex-direction:column;\nheight:70vh;\nwidth:50vw;\n}\n\n.left{\nmargin-left:5vw;\nwidth:45vw;\ndisplay: flex;\nflex-direction: column;\nalign-items: baseline;\njustify-content: flex-end;\noverflow:hidden;\n}\n.left > img {\n  height:100%;\n  width:100%;\n  object-fit:cover;\n\n}\n\n.left-info{\n  background-color:white;\n}\n.right{\nwidth:35vw;\nflex-grow: 0;\nmargin-right:auto;\n}\n.left-img{\nwidth:40vw;\nheight:auto;\n}\n\n.post{\npadding:5px;\nheight:33%;\npadding-top:0px;\ndisplay:flex;\nflex-direction: row;\n}\n.post-img > img{\n  height: 100%;\n  width: auto;\n  object-fit: contain;\n}\n.post-info{\npadding:5px;\n\n}\n.post-info h1{\n  margin:0;\n}\n\n@media only screen and (max-width: 800px) {\n.about-wrapper{\n  flex-direction: column;\n  height:auto;\n}\n.left, .right{\n  width:100vw;\n  height:auto;\n  padding:0;\n}\n.left{\n  height:40vh;\n  margin-left: 0;\n}\n.post{\n  flex-direction: column;\n  padding:0;\n}\n.post-img > img{\n  width:100vw;\n  height:30vh;\n  object-fit: cover;\n}\n}\n", ""]);
+exports.push([module.i, ".about-wrapper{\npadding-top:10vh;\ndisplay:flex;\nflex-direction: row;\nwidth:100vw;\nmax-width:100%;\nheight:80vh;\nflex:1;\nmargin: 0 auto;\npadding-top:5vh;\npadding-bottom: 5vh;\n}\n.left, .right{\ndisplay:flex;\nflex-direction:column;\nheight:70vh;\nwidth:50vw;\n}\n\n.left{\nmargin-left:5vw;\nwidth:45vw;\ndisplay: flex;\nflex-direction: column;\nalign-items: baseline;\njustify-content: flex-end;\noverflow:hidden;\n}\n.left > img {\n  height:100%;\n  width:100%;\n  object-fit:cover;\n\n}\n\n.left-info{\n  background-color:white;\n}\n.right{\nwidth:35vw;\nflex-grow: 0;\nmargin-right:auto;\n}\n.left-img{\nwidth:40vw;\nheight:auto;\n}\n\n.post{\npadding:5px;\nheight:33%;\npadding-top:0px;\ndisplay:flex;\nflex-direction: row;\n}\n.post-img {\n  width:60%;\n}\n.post-img > img{\n  height: 100%;\n  width: 100%;\n  object-fit: cover;\n}\n.post-info{\npadding:5px;\n\n}\n.post-info h1{\n  margin:0;\n}\n\n@media only screen and (max-width: 800px) {\n.about-wrapper{\n  flex-direction: column;\n  height:auto;\n}\n.left, .right{\n  width:100vw;\n  height:auto;\n  padding:0;\n}\n.left{\n  height:40vh;\n  margin-left: 0;\n}\n.post{\n  flex-direction: column;\n  padding:0;\n}\n.post-img > img{\n  width:100vw;\n  height:30vh;\n  object-fit: cover;\n}\n}\n", ""]);
 
 
 
@@ -25723,7 +25728,7 @@ if(false) {
 
 exports = module.exports = __webpack_require__(3)(false);
 // Module
-exports.push([module.i, ".navbar{\n  color:black;\n  width:100vw;\n  margin-bottom:5vh;\n  display: flex;\n  align-items: flex-start;\n  justify-content: center;\n}\n.navbar > ul{\n  list-style: none;\n  display: flex;\n  justify-content: center;\n  width: 100%;\n  padding-left:0;\n}\n.navbar > ul li{\n  display:inline;\n  padding-left:2vw;\n  padding-right:2vw;\n}\n\n.nav-button{\n  background-color: none;\n  border:0;\n  border:none;\n  border-bottom:2px solid white;\n\n  transition:0.6s all;\n\n}\n.nav-button:focus{\n  outline:none;\n  border-bottom:2px solid orange;\n  transition:0.6s all;\n}\n.component-page{\n  width:0;\n  visibility: hidden;\n  overflow:hidden;\n  height:0;\n  transition:0.6s all;\n\n}\n.selected{\n  width:100%;\n  height:auto;\n  min-height:80vh;\n  visibility: visible;\n  transition:0.6s all;\n\n}\n.aboutText{\n  margin-left:auto;\n  margin-right:auto;\n  height:auto;\n  width:70%;\n}\n/* .footer{\n  width:100vw;\n  background-color:#1E2222;\n}\n.footer > ul {\n  margin:0;\n  display:flex;\n  flex-direction: row;\n  list-style: none;\n}\n.footer > ul li{\n  display:flex;\n  flex-direction: row;\n  font-size:36px;\n  color:white;\n}\n.footer > a {\n  color:white;\n} */\n@media only screen and (max-width: 800px) {\n.selected{\n  height:auto;\n}\n}\n", ""]);
+exports.push([module.i, ".navbar{\n  color:black;\n  width:100vw;\n  margin-bottom:5vh;\n  display: flex;\n  align-items: flex-start;\n  justify-content: center;\n}\n.navbar > ul{\n  list-style: none;\n  display: flex;\n  justify-content: center;\n  width: 100%;\n  padding-left:0;\n}\n.navbar > ul li{\n  display:inline;\n  padding-left:2vw;\n  padding-right:2vw;\n}\n\n.nav-button{\n  background-color: white;\n  border-left:0;\n  border-top:0;\n  border-right:0;\n  border-bottom:2px solid white;\n\n  transition:0.6s all;\n}\n.nav-button:focus{\n  outline:none;\n  border-bottom:2px solid orange;\n  -moz-border-bottom-colors: orange;\n  transition:0.6s all;\n}\nbutton:active{\n  color:black;\n}\n\n.component-page{\n  width:0;\n  visibility: hidden;\n  overflow:hidden;\n  height:0;\n  transition:0.6s all;\n\n}\n.selected{\n  width:100%;\n  height:auto;\n  min-height:80vh;\n  visibility: visible;\n  transition:0.6s all;\n\n}\n.aboutText{\n  margin-left:auto;\n  margin-right:auto;\n  height:auto;\n  width:70%;\n}\n/* .footer{\n  width:100vw;\n  background-color:#1E2222;\n}\n.footer > ul {\n  margin:0;\n  display:flex;\n  flex-direction: row;\n  list-style: none;\n}\n.footer > ul li{\n  display:flex;\n  flex-direction: row;\n  font-size:36px;\n  color:white;\n}\n.footer > a {\n  color:white;\n} */\n@media only screen and (max-width: 800px) {\n.selected{\n  height:auto;\n}\n}\n", ""]);
 
 
 
