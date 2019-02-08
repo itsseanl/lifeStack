@@ -42,5 +42,6 @@ object-fit: cover;
 .modalText{
   justify-content: flex-start;
   overflow:scroll;
+  padding:5px;
 }
 }
