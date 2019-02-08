@@ -12,10 +12,10 @@ const BlogModal = ({ info, handleClose, showModal }) => {
         <div className="blogModalImage">
           <img src={info[0].img} />
         </div>
-        <div className="modalText">
+        <div className="blogModalText">
           <h1 className="item">{info[0].title}</h1>
           <h3 className="price">{info[0].date}</h3>
-          <p className="description">{info[0].text}</p>
+          <div dangerouslySetInnerHTML={{__html: info[0].text }}></div>
         </div>
         <button  className="btnClose" onClick={handleClose}><i class="fas fa-times"></i></button>
       </div>

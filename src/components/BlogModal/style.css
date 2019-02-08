@@ -8,12 +8,22 @@ height: 100vh;
 width: 100%;
 object-fit: cover;
 }
+.blogModalText{
+  display:flex;
+  width:50vw;
+  flex-direction: column;
+  padding-left: 5vw;
+  justify-content: flex-start;
+  height:100vh;
+  overflow: auto;
+}
 
 @media only screen and (max-width: 800px) {
 .blogModalImage{
   width:100vw;
   height:40vh;
 }
+.blogModalText,
 .modalText{
   justify-content: flex-start;
   overflow:scroll;
