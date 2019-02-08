@@ -8,7 +8,7 @@ const BlogModal = ({ info, handleClose, showModal }) => {
 
   return (
     <div className={ showHideClassName }>
-      <div className="modalContent">
+      <div className="blogModalContent">
         <div className="blogModalImage">
           <img src={info[0].img} />
         </div>

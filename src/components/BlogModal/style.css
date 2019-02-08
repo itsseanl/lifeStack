@@ -1,6 +1,10 @@
+.blogModalContent{
+  display: flex;
+  flex-direction: column;
+}
 .blogModalImage {
-  width: 50vw;
-height: 100vh;
+  width: 100vw;
+height: 40vh;
   }
 
 .blogModalImage > img{
@@ -10,11 +14,22 @@ object-fit: cover;
 }
 .blogModalText{
   display:flex;
-  width:50vw;
+  width:auto;
   flex-direction: column;
-  padding-left: 5vw;
   justify-content: flex-start;
-  height:100vh;
+  height:auto;
+  padding:20vh;
+  padding-top:5vh;
+  padding-bottom: 5vh;
+  overflow: auto;
+}
+.btnClose{
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.modalOn{
   overflow: auto;
 }
 
