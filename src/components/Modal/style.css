@@ -55,6 +55,9 @@
   justify-content: center;
   height:100vh;
 }
+.description{
+  width:80%;
+}
 .item{
   font-size:2em;
 }
