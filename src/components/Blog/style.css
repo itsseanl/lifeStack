@@ -33,9 +33,6 @@ overflow:hidden;
 
 }
 
-.left-info{
-  background-color:white;
-}
 .right{
 width:40vw;
 flex-grow: 0;
@@ -67,6 +64,12 @@ padding:5px;
 }
 .post-info h1{
   margin:0;
+}
+
+.left:hover, .post:hover{
+  background-color:#EE7E33;
+  color:white;
+  transition: 0.4s all;
 }
 button, input[type="submit"], input[type="reset"] {
 	background: none;
