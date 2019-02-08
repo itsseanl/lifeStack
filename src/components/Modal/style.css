@@ -99,6 +99,10 @@
     width:90vw;
     height:70vh;
   }
+  .description{
+    width:auto;
+    padding:5px;
+  }
   .btnClose{
     position: absolute;
     top: 0;
