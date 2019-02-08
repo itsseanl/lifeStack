@@ -92,16 +92,22 @@ button, input[type="submit"], input[type="reset"] {
   padding:0;
 }
 .left{
-  height:40vh;
+  height:60vh;
   margin-left: 0;
 }
 .post{
   flex-direction: column;
   padding:0;
+  padding-top:5vh;
 }
-.post-img > img{
-  width:100vw;
-  height:30vh;
-  object-fit: cover;
+.left-info, .post-info{
+  width:80%;
+  margin:auto;
+}
+.left > img, .post-img{
+  height: 30vh;
+width: 80%;
+margin: 0 auto;
+object-fit: contain;
 }
 }
