@@ -65,6 +65,21 @@
 /************************************************************************/
 /******/ ([
 /* 0 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+/* WEBPACK VAR INJECTION */(function(process) {
+
+if (process.env.NODE_ENV === 'production') {
+  module.exports = __webpack_require__(10);
+} else {
+  module.exports = __webpack_require__(11);
+}
+
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(1)))
+
+/***/ }),
+/* 1 */
 /***/ (function(module, exports) {
 
 // shim for using process in browser
@@ -254,21 +269,6 @@ process.umask = function() { return 0; };
 
 
 /***/ }),
-/* 1 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-/* WEBPACK VAR INJECTION */(function(process) {
-
-if (process.env.NODE_ENV === 'production') {
-  module.exports = __webpack_require__(10);
-} else {
-  module.exports = __webpack_require__(11);
-}
-
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
-
-/***/ }),
 /* 2 */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -312,7 +312,7 @@ if (process.env.NODE_ENV === 'production') {
   module.exports = __webpack_require__(16);
 }
 
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(1)))
 
 /***/ }),
 /* 3 */
@@ -1005,7 +1005,7 @@ function checkPropTypes(typeSpecs, values, location, componentName, getStack) {
 
 module.exports = checkPropTypes;
 
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(1)))
 
 /***/ }),
 /* 7 */
@@ -1020,7 +1020,7 @@ if (process.env.NODE_ENV === 'production') {
   module.exports = __webpack_require__(15);
 }
 
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(1)))
 
 /***/ }),
 /* 8 */
@@ -1058,7 +1058,7 @@ module.exports = g;
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-var _react = __webpack_require__(1);
+var _react = __webpack_require__(0);
 
 var _react2 = _interopRequireDefault(_react);
 
@@ -1074,7 +1074,7 @@ var _MainContent = __webpack_require__(24);
 
 var _MainContent2 = _interopRequireDefault(_MainContent);
 
-__webpack_require__(37);
+__webpack_require__(40);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -3031,7 +3031,7 @@ module.exports = react;
   })();
 }
 
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(1)))
 
 /***/ }),
 /* 12 */
@@ -3069,7 +3069,7 @@ module.exports = ReactPropTypesSecret;
 /*
  Modernizr 3.0.0pre (Custom Build) | MIT
 */
-var aa=__webpack_require__(1),n=__webpack_require__(5),ba=__webpack_require__(7);function ca(a,b,c,d,e,f,g,h){if(!a){a=void 0;if(void 0===b)a=Error("Minified exception occurred; use the non-minified dev environment for the full error message and additional helpful warnings.");else{var k=[c,d,e,f,g,h],l=0;a=Error(b.replace(/%s/g,function(){return k[l++]}));a.name="Invariant Violation"}a.framesToPop=1;throw a;}}
+var aa=__webpack_require__(0),n=__webpack_require__(5),ba=__webpack_require__(7);function ca(a,b,c,d,e,f,g,h){if(!a){a=void 0;if(void 0===b)a=Error("Minified exception occurred; use the non-minified dev environment for the full error message and additional helpful warnings.");else{var k=[c,d,e,f,g,h],l=0;a=Error(b.replace(/%s/g,function(){return k[l++]}));a.name="Invariant Violation"}a.framesToPop=1;throw a;}}
 function t(a){for(var b=arguments.length-1,c="https://reactjs.org/docs/error-decoder.html?invariant="+a,d=0;d<b;d++)c+="&args[]="+encodeURIComponent(arguments[d+1]);ca(!1,"Minified React error #"+a+"; visit %s for the full message or use the non-minified dev environment for full errors and additional helpful warnings. ",c)}aa?void 0:t("227");function da(a,b,c,d,e,f,g,h,k){var l=Array.prototype.slice.call(arguments,3);try{b.apply(c,l)}catch(m){this.onError(m)}}
 var ea=!1,fa=null,ha=!1,ia=null,ja={onError:function(a){ea=!0;fa=a}};function ka(a,b,c,d,e,f,g,h,k){ea=!1;fa=null;da.apply(ja,arguments)}function la(a,b,c,d,e,f,g,h,k){ka.apply(this,arguments);if(ea){if(ea){var l=fa;ea=!1;fa=null}else t("198"),l=void 0;ha||(ha=!0,ia=l)}}var ma=null,na={};
 function oa(){if(ma)for(var a in na){var b=na[a],c=ma.indexOf(a);-1<c?void 0:t("96",a);if(!pa[c]){b.extractEvents?void 0:t("97",a);pa[c]=b;c=b.eventTypes;for(var d in c){var e=void 0;var f=c[d],g=b,h=d;qa.hasOwnProperty(h)?t("99",h):void 0;qa[h]=f;var k=f.phasedRegistrationNames;if(k){for(e in k)k.hasOwnProperty(e)&&ra(k[e],g,h);e=!0}else f.registrationName?(ra(f.registrationName,g,h),e=!0):e=!1;e?void 0:t("98",d,a)}}}}
@@ -4046,7 +4046,7 @@ exports.unstable_getFirstCallbackNode = unstable_getFirstCallbackNode;
   })();
 }
 
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0), __webpack_require__(8)))
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(1), __webpack_require__(8)))
 
 /***/ }),
 /* 16 */
@@ -4070,7 +4070,7 @@ if (process.env.NODE_ENV !== "production") {
   (function() {
 'use strict';
 
-var React = __webpack_require__(1);
+var React = __webpack_require__(0);
 var _assign = __webpack_require__(5);
 var checkPropTypes = __webpack_require__(6);
 var scheduler = __webpack_require__(7);
@@ -24139,7 +24139,7 @@ module.exports = reactDom;
   })();
 }
 
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(1)))
 
 /***/ }),
 /* 17 */
@@ -24154,7 +24154,7 @@ if (process.env.NODE_ENV === 'production') {
   module.exports = __webpack_require__(19);
 }
 
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(1)))
 
 /***/ }),
 /* 18 */
@@ -24602,7 +24602,7 @@ exports.unstable_unsubscribe = unstable_unsubscribe;
   })();
 }
 
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(1)))
 
 /***/ }),
 /* 20 */
@@ -24617,7 +24617,7 @@ Object.defineProperty(exports, "__esModule", {
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-var _react = __webpack_require__(1);
+var _react = __webpack_require__(0);
 
 var _react2 = _interopRequireDefault(_react);
 
@@ -24879,7 +24879,7 @@ Object.defineProperty(exports, "__esModule", {
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-var _react = __webpack_require__(1);
+var _react = __webpack_require__(0);
 
 var _react2 = _interopRequireDefault(_react);
 
@@ -24899,7 +24899,7 @@ var _Blog = __webpack_require__(32);
 
 var _Blog2 = _interopRequireDefault(_Blog);
 
-__webpack_require__(35);
+__webpack_require__(38);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -25087,7 +25087,7 @@ var jsonProducts = {
     "date": "February 6th, 2019",
     "img": "/images/desk.jpg",
     "previewText": "Aliquam vel metus faucibus, bibendum erat malesuada, condimentum...",
-    "text": "Aliquam vel metus faucibus, bibendum erat malesuada, condimentum velit. Vivamus ex ligula, ultrices a pulvinar ac, venenatis ac ligula. Donec semper laoreet dui. Morbi faucibus sagittis pellentesque. Fusce id metus ac magna eleifend varius at quis lectus. Sed pellentesque ex at dolor hendrerit sollicitudin dictum et nulla. Aliquam rhoncus justo elit, non tincidunt nibh placerat id. Vestibulum vestibulum condimentum orci, quis tempus ipsum pharetra at. Proin tristique pretium mollis. Praesent metus sapien, facilisis in lectus ut, maximus varius erat."
+    "text": "Aliquam vel metus faucibus, bibendum erat malesuada, condimentum velit. Vivamus ex ligula, ultrices a pulvinar ac, venenatis ac ligula. Donec semper laoreet dui. Morbi faucibus sagittis pellentesque. Fusce id metus ac magna eleifend varius at quis lectus. Sed pellentesque ex at dolor hendrerit sollicitudin dictum et nulla. Aliquam rhoncus justo elit, non tincidunt nibh placerat id. Vestibulum vestibulum condimentum orci, quis tempus ipsum pharetra at. Proin tristique pretium mollis. Praesent metus sapien, facilisis in lectus ut, maximus varius erat.Aliquam vel metus faucibus, bibendum erat malesuada, condimentum velit. Vivamus ex ligula, ultrices a pulvinar ac, venenatis ac ligula. Donec semper laoreet dui. Morbi faucibus sagittis pellentesque. Fusce id metus ac magna eleifend varius at quis lectus. Sed pellentesque ex at dolor hendrerit sollicitudin dictum et nulla. Aliquam rhoncus justo elit, non tincidunt nibh placerat id. Vestibulum vestibulum condimentum orci, quis tempus ipsum pharetra at. Proin tristique pretium mollis. Praesent metus sapien, facilisis in lectus ut, maximus varius erat.Aliquam vel metus faucibus, bibendum erat malesuada, condimentum velit. Vivamus ex ligula, ultrices a pulvinar ac, venenatis ac ligula. Donec semper laoreet dui. Morbi faucibus sagittis pellentesque. Fusce id metus ac magna eleifend varius at quis lectus. Sed pellentesque ex at dolor hendrerit sollicitudin dictum et nulla. Aliquam rhoncus justo elit, non tincidunt nibh placerat id. Vestibulum vestibulum condimentum orci, quis tempus ipsum pharetra at. Proin tristique pretium mollis. Praesent metus sapien, facilisis in lectus ut, maximus varius erat."
 
   }, {
     "title": "placeholder",
@@ -25174,7 +25174,7 @@ Object.defineProperty(exports, "__esModule", {
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-var _react = __webpack_require__(1);
+var _react = __webpack_require__(0);
 
 var _react2 = _interopRequireDefault(_react);
 
@@ -25298,7 +25298,7 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _react = __webpack_require__(1);
+var _react = __webpack_require__(0);
 
 var _react2 = _interopRequireDefault(_react);
 
@@ -25498,7 +25498,7 @@ Object.defineProperty(exports, "__esModule", {
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-var _react = __webpack_require__(1);
+var _react = __webpack_require__(0);
 
 var _react2 = _interopRequireDefault(_react);
 
@@ -25506,7 +25506,11 @@ var _reactDom = __webpack_require__(2);
 
 var _reactDom2 = _interopRequireDefault(_reactDom);
 
-__webpack_require__(33);
+var _BlogModal = __webpack_require__(33);
+
+var _BlogModal2 = _interopRequireDefault(_BlogModal);
+
+__webpack_require__(36);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -25524,15 +25528,50 @@ var Blog = function (_React$Component) {
   function Blog() {
     _classCallCheck(this, Blog);
 
-    return _possibleConstructorReturn(this, (Blog.__proto__ || Object.getPrototypeOf(Blog)).apply(this, arguments));
+    var _this = _possibleConstructorReturn(this, (Blog.__proto__ || Object.getPrototypeOf(Blog)).call(this));
+
+    _this.state = {
+      blogModal: [{
+        show: false,
+        title: '',
+        date: '',
+        img: '',
+        text: ''
+      }]
+    };
+    return _this;
   }
 
   _createClass(Blog, [{
+    key: 'showModal',
+    value: function showModal(title, date, img, text) {
+      this.setState({
+        blogModal: [{
+          show: true,
+          title: title,
+          date: date,
+          img: img,
+          text: text
+        }]
+      });
+    }
+  }, {
+    key: 'hideModal',
+    value: function hideModal() {
+      var newState = this.state;
+      console.log(newState);
+      newState.blogModal[0].show = false;
+      this.setState(newState);
+    }
+  }, {
     key: 'render',
     value: function render() {
+      var _this2 = this;
+
       return _react2.default.createElement(
         'div',
         { className: 'about-wrapper' },
+        _react2.default.createElement(_BlogModal2.default, { info: this.state.blogModal, handleClose: this.hideModal.bind(this), showModal: this.showModal.bind(this) }),
         this.props.blogPosts.slice(0, 1).map(function (_ref) {
           var title = _ref.title,
               date = _ref.date,
@@ -25540,26 +25579,32 @@ var Blog = function (_React$Component) {
               previewText = _ref.previewText,
               text = _ref.text;
           return _react2.default.createElement(
-            'div',
-            { id: 'leftDiv', className: 'left' },
-            _react2.default.createElement('img', { key: img, src: img }),
+            'a',
+            { className: 'btnModal', onClick: function onClick() {
+                return _this2.showModal(title, date, img, text);
+              } },
             _react2.default.createElement(
               'div',
-              { className: 'left-info' },
+              { id: 'leftDiv', className: 'left' },
+              _react2.default.createElement('img', { key: img, src: img }),
               _react2.default.createElement(
-                'h1',
-                { key: title },
-                title
-              ),
-              _react2.default.createElement(
-                'p',
-                { key: date },
-                date
-              ),
-              _react2.default.createElement(
-                'p',
-                { key: previewText },
-                previewText
+                'div',
+                { className: 'left-info' },
+                _react2.default.createElement(
+                  'h1',
+                  { key: title },
+                  title
+                ),
+                _react2.default.createElement(
+                  'p',
+                  { key: date },
+                  date
+                ),
+                _react2.default.createElement(
+                  'p',
+                  { key: previewText },
+                  previewText
+                )
               )
             )
           );
@@ -25574,8 +25619,10 @@ var Blog = function (_React$Component) {
                 previewText = _ref2.previewText,
                 text = _ref2.text;
             return _react2.default.createElement(
-              'div',
-              { className: 'post' },
+              'a',
+              { className: 'post', onClick: function onClick() {
+                  return _this2.showModal(title, date, img, text);
+                } },
               _react2.default.createElement(
                 'div',
                 { className: 'post-img' },
@@ -25616,68 +25663,80 @@ exports.default = Blog;
 /* 33 */
 /***/ (function(module, exports, __webpack_require__) {
 
-
-var content = __webpack_require__(34);
-
-if(typeof content === 'string') content = [[module.i, content, '']];
-
-var transform;
-var insertInto;
+"use strict";
 
 
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
 
-var options = {"hmr":true}
+var _react = __webpack_require__(0);
 
-options.transform = transform
-options.insertInto = undefined;
+var _react2 = _interopRequireDefault(_react);
 
-var update = __webpack_require__(4)(content, options);
+var _reactDom = __webpack_require__(2);
 
-if(content.locals) module.exports = content.locals;
+var _reactDom2 = _interopRequireDefault(_reactDom);
 
-if(false) {
-	module.hot.accept("!!../../../node_modules/css-loader/dist/cjs.js!./style.css", function() {
-		var newContent = require("!!../../../node_modules/css-loader/dist/cjs.js!./style.css");
+__webpack_require__(34);
 
-		if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-		var locals = (function(a, b) {
-			var key, idx = 0;
+var BlogModal = function BlogModal(_ref) {
+  var info = _ref.info,
+      handleClose = _ref.handleClose,
+      showModal = _ref.showModal;
 
-			for(key in a) {
-				if(!b || a[key] !== b[key]) return false;
-				idx++;
-			}
+  console.log(info);
+  var showHideClassName = info[0].show ? "modal modalOn" : "modal modalOff";
 
-			for(key in b) idx--;
+  return _react2.default.createElement(
+    'div',
+    { className: showHideClassName },
+    _react2.default.createElement(
+      'div',
+      { className: 'modalContent' },
+      _react2.default.createElement(
+        'div',
+        { className: 'blogModalImage' },
+        _react2.default.createElement('img', { src: info[0].img })
+      ),
+      _react2.default.createElement(
+        'div',
+        { className: 'modalText' },
+        _react2.default.createElement(
+          'h1',
+          { className: 'item' },
+          info[0].title
+        ),
+        _react2.default.createElement(
+          'h3',
+          { className: 'price' },
+          info[0].date
+        ),
+        _react2.default.createElement(
+          'p',
+          { className: 'description' },
+          info[0].text
+        )
+      ),
+      _react2.default.createElement(
+        'button',
+        { className: 'btnClose', onClick: handleClose },
+        _react2.default.createElement('i', { 'class': 'fas fa-times' })
+      )
+    )
+  );
+};
 
-			return idx === 0;
-		}(content.locals, newContent.locals));
-
-		if(!locals) throw new Error('Aborting CSS HMR due to changed css-modules locals.');
-
-		update(newContent);
-	});
-
-	module.hot.dispose(function() { update(); });
-}
+exports.default = BlogModal;
 
 /***/ }),
 /* 34 */
 /***/ (function(module, exports, __webpack_require__) {
 
-exports = module.exports = __webpack_require__(3)(false);
-// Module
-exports.push([module.i, ".about-wrapper{\npadding-top:10vh;\ndisplay:flex;\nflex-direction: row;\nwidth:100vw;\nmax-width:100%;\nheight:80vh;\nflex:1;\nmargin: 0 auto;\npadding-top:5vh;\npadding-bottom: 5vh;\n}\n.left, .right{\ndisplay:flex;\nflex-direction:column;\nheight:70vh;\nwidth:50vw;\n}\n\n.left{\nmargin-left:5vw;\nwidth:45vw;\ndisplay: flex;\nflex-direction: column;\nalign-items: baseline;\njustify-content: flex-end;\noverflow:hidden;\n}\n.left > img {\n  height:100%;\n  width:100%;\n  object-fit:cover;\n\n}\n\n.left-info{\n  background-color:white;\n}\n.right{\nwidth:35vw;\nflex-grow: 0;\nmargin-right:auto;\n}\n.left-img{\nwidth:40vw;\nheight:auto;\n}\n\n.post{\npadding:5px;\nheight:33%;\npadding-top:0px;\ndisplay:flex;\nflex-direction: row;\n}\n.post-img {\n  width:60%;\n}\n.post-img > img{\n  height: 100%;\n  width: 100%;\n  object-fit: cover;\n}\n.post-info{\npadding:5px;\n\n}\n.post-info h1{\n  margin:0;\n}\n\n@media only screen and (max-width: 800px) {\n.about-wrapper{\n  flex-direction: column;\n  height:auto;\n}\n.left, .right{\n  width:100vw;\n  height:auto;\n  padding:0;\n}\n.left{\n  height:40vh;\n  margin-left: 0;\n}\n.post{\n  flex-direction: column;\n  padding:0;\n}\n.post-img > img{\n  width:100vw;\n  height:30vh;\n  object-fit: cover;\n}\n}\n", ""]);
 
-
-
-/***/ }),
-/* 35 */
-/***/ (function(module, exports, __webpack_require__) {
-
-
-var content = __webpack_require__(36);
+var content = __webpack_require__(35);
 
 if(typeof content === 'string') content = [[module.i, content, '']];
 
@@ -25723,21 +25782,141 @@ if(false) {
 }
 
 /***/ }),
-/* 36 */
+/* 35 */
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(3)(false);
 // Module
-exports.push([module.i, ".navbar{\n  color:black;\n  width:100vw;\n  margin-bottom:5vh;\n  display: flex;\n  align-items: flex-start;\n  justify-content: center;\n}\n.navbar > ul{\n  list-style: none;\n  display: flex;\n  justify-content: center;\n  width: 100%;\n  padding-left:0;\n}\n.navbar > ul li{\n  display:inline;\n  padding-left:2vw;\n  padding-right:2vw;\n}\n\n.nav-button{\n  background-color: white;\n  border-left:0;\n  border-top:0;\n  border-right:0;\n  border-bottom:2px solid white;\n\n  transition:0.6s all;\n}\n.nav-button:focus{\n  outline:none;\n  border-bottom:2px solid orange;\n  -moz-border-bottom-colors: orange;\n  transition:0.6s all;\n}\nbutton:active{\n  color:black;\n}\n\n.component-page{\n  width:0;\n  visibility: hidden;\n  overflow:hidden;\n  height:0;\n  transition:0.6s all;\n\n}\n.selected{\n  width:100%;\n  height:auto;\n  min-height:80vh;\n  visibility: visible;\n  transition:0.6s all;\n\n}\n.aboutText{\n  margin-left:auto;\n  margin-right:auto;\n  height:auto;\n  width:70%;\n}\n/* .footer{\n  width:100vw;\n  background-color:#1E2222;\n}\n.footer > ul {\n  margin:0;\n  display:flex;\n  flex-direction: row;\n  list-style: none;\n}\n.footer > ul li{\n  display:flex;\n  flex-direction: row;\n  font-size:36px;\n  color:white;\n}\n.footer > a {\n  color:white;\n} */\n@media only screen and (max-width: 800px) {\n.selected{\n  height:auto;\n}\n}\n", ""]);
+exports.push([module.i, ".blogModalImage {\n  width: 50vw;\nheight: 100vh;\n  }\n\n.blogModalImage > img{\n  height: 100%;\nwidth: 100%;\nobject-fit: cover;\n}\n\n@media only screen and (max-width: 800px) {\n.blogModalImage{\n  width:100vw;\n  height:40vh;\n}\n.modalText{\n  justify-content: flex-start;\n  overflow:scroll;\n}\n}\n", ""]);
 
 
+
+/***/ }),
+/* 36 */
+/***/ (function(module, exports, __webpack_require__) {
+
+
+var content = __webpack_require__(37);
+
+if(typeof content === 'string') content = [[module.i, content, '']];
+
+var transform;
+var insertInto;
+
+
+
+var options = {"hmr":true}
+
+options.transform = transform
+options.insertInto = undefined;
+
+var update = __webpack_require__(4)(content, options);
+
+if(content.locals) module.exports = content.locals;
+
+if(false) {
+	module.hot.accept("!!../../../node_modules/css-loader/dist/cjs.js!./style.css", function() {
+		var newContent = require("!!../../../node_modules/css-loader/dist/cjs.js!./style.css");
+
+		if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+
+		var locals = (function(a, b) {
+			var key, idx = 0;
+
+			for(key in a) {
+				if(!b || a[key] !== b[key]) return false;
+				idx++;
+			}
+
+			for(key in b) idx--;
+
+			return idx === 0;
+		}(content.locals, newContent.locals));
+
+		if(!locals) throw new Error('Aborting CSS HMR due to changed css-modules locals.');
+
+		update(newContent);
+	});
+
+	module.hot.dispose(function() { update(); });
+}
 
 /***/ }),
 /* 37 */
 /***/ (function(module, exports, __webpack_require__) {
 
+exports = module.exports = __webpack_require__(3)(false);
+// Module
+exports.push([module.i, ".about-wrapper{\npadding-top:10vh;\ndisplay:flex;\nflex-direction: row;\nwidth:100vw;\nmax-width:100%;\nheight:80vh;\nflex:1;\nmargin: 0 auto;\npadding-top:5vh;\npadding-bottom: 5vh;\n}\n.left, .right{\ndisplay:flex;\nflex-direction:column;\nheight:70vh;\nwidth:50vw;\n}\n\n.left{\nmargin-left:5vw;\nwidth:45vw;\ndisplay: flex;\nflex-direction: column;\nalign-items: baseline;\njustify-content: flex-end;\noverflow:hidden;\n}\n.left > img {\n  height:100%;\n  width:100%;\n  object-fit:cover;\n\n}\n\n.left-info{\n  background-color:white;\n}\n.right{\nwidth:40vw;\nflex-grow: 0;\nmargin-right:auto;\n}\n.left-img{\nwidth:40vw;\nheight:auto;\n}\n\n.post{\npadding:5px;\nheight:33%;\npadding-top:0px;\ndisplay:flex;\nflex-direction: row;\n}\n.post-img {\n  width:70%;\n}\n.post-img > img{\n  height: 100%;\n  width: 100%;\n  object-fit: cover;\n}\n.post-info{\npadding:5px;\n\n}\n.post-info h1{\n  margin:0;\n}\nbutton, input[type=\"submit\"], input[type=\"reset\"] {\n\tbackground: none;\n\tcolor: inherit;\n\tborder: none;\n\tpadding: 0;\n\tfont: inherit;\n\tcursor: pointer;\n\toutline: inherit;\n}\n@media only screen and (max-width: 800px) {\n.about-wrapper{\n  flex-direction: column;\n  height:auto;\n}\n.left, .right{\n  width:100vw;\n  height:auto;\n  padding:0;\n}\n.left{\n  height:40vh;\n  margin-left: 0;\n}\n.post{\n  flex-direction: column;\n  padding:0;\n}\n.post-img > img{\n  width:100vw;\n  height:30vh;\n  object-fit: cover;\n}\n}\n", ""]);
 
-var content = __webpack_require__(38);
+
+
+/***/ }),
+/* 38 */
+/***/ (function(module, exports, __webpack_require__) {
+
+
+var content = __webpack_require__(39);
+
+if(typeof content === 'string') content = [[module.i, content, '']];
+
+var transform;
+var insertInto;
+
+
+
+var options = {"hmr":true}
+
+options.transform = transform
+options.insertInto = undefined;
+
+var update = __webpack_require__(4)(content, options);
+
+if(content.locals) module.exports = content.locals;
+
+if(false) {
+	module.hot.accept("!!../../../node_modules/css-loader/dist/cjs.js!./style.css", function() {
+		var newContent = require("!!../../../node_modules/css-loader/dist/cjs.js!./style.css");
+
+		if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+
+		var locals = (function(a, b) {
+			var key, idx = 0;
+
+			for(key in a) {
+				if(!b || a[key] !== b[key]) return false;
+				idx++;
+			}
+
+			for(key in b) idx--;
+
+			return idx === 0;
+		}(content.locals, newContent.locals));
+
+		if(!locals) throw new Error('Aborting CSS HMR due to changed css-modules locals.');
+
+		update(newContent);
+	});
+
+	module.hot.dispose(function() { update(); });
+}
+
+/***/ }),
+/* 39 */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(3)(false);
+// Module
+exports.push([module.i, ".navbar{\n  color:black;\n  width:100vw;\n  margin-bottom:0;\n  display: flex;\n  align-items: flex-start;\n  justify-content: center;\n}\n.navbar > ul{\n  list-style: none;\n  display: flex;\n  justify-content: center;\n  width: 100%;\n  padding-left:0;\n}\n.navbar > ul li{\n  display:inline;\n  padding-left:2vw;\n  padding-right:2vw;\n}\n\n.nav-button{\n  background-color: white;\n  border-left:0;\n  border-top:0;\n  border-right:0;\n  border-bottom:2px solid white;\n\n  transition:0.6s all;\n}\n.nav-button:focus{\n  outline:none;\n  border-bottom:2px solid orange;\n  -moz-border-bottom-colors: orange;\n  transition:0.6s all;\n}\nbutton:active{\n  color:black;\n}\n\n.component-page{\n  width:0;\n  visibility: hidden;\n  overflow:hidden;\n  height:0;\n  transition:0.6s all;\n\n}\n.selected{\n  width:100%;\n  height:auto;\n  min-height:80vh;\n  visibility: visible;\n  transition:0.6s all;\n\n}\n.aboutText{\n  margin-left:auto;\n  margin-right:auto;\n  height:auto;\n  width:70%;\n}\n/* .footer{\n  width:100vw;\n  background-color:#1E2222;\n}\n.footer > ul {\n  margin:0;\n  display:flex;\n  flex-direction: row;\n  list-style: none;\n}\n.footer > ul li{\n  display:flex;\n  flex-direction: row;\n  font-size:36px;\n  color:white;\n}\n.footer > a {\n  color:white;\n} */\n@media only screen and (max-width: 800px) {\n.selected{\n  height:auto;\n}\n}\n", ""]);
+
+
+
+/***/ }),
+/* 40 */
+/***/ (function(module, exports, __webpack_require__) {
+
+
+var content = __webpack_require__(41);
 
 if(typeof content === 'string') content = [[module.i, content, '']];
 
@@ -25783,7 +25962,7 @@ if(false) {
 }
 
 /***/ }),
-/* 38 */
+/* 41 */
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(3)(false);
@@ -25791,7 +25970,7 @@ exports = module.exports = __webpack_require__(3)(false);
 exports.push([module.i, "@import url(https://fonts.googleapis.com/css?family=Montserrat);", ""]);
 
 // Module
-exports.push([module.i, "html, body{\n  margin:0;\n  padding:0;\n  font-family:'Montserrat';\n  overflow-x: hidden;\n}\n\n.navbar{\n  color:black;\n  width: 100vw;\n  margin-bottom:5vh;\n  display: flex;\n  align-items: flex-start;\n  justify-content: flex-end;\n}\n.navbar > ul{\n  list-style: none;\n}\n.navbar > ul li{\n  display:inline;\n  padding-left:2vw;\n  padding-right:2vw;\n}\n\n\n\n@media only screen and (max-width: 600px) {\n    .navbar{\n      justify-content: center;\n      margin-left: 0;\n    }\n}\n", ""]);
+exports.push([module.i, "html, body{\n  margin:0;\n  padding:0;\n  font-family:'Montserrat';\n  overflow-x: hidden;\n}\n\n\n\n@media only screen and (max-width: 600px) {\n    .navbar{\n      justify-content: center;\n      margin-left: 0;\n    }\n}\n", ""]);
 
 
 

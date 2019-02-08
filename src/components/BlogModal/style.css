@@ -1,0 +1,21 @@
+.blogModalImage {
+  width: 50vw;
+height: 100vh;
+  }
+
+.blogModalImage > img{
+  height: 100%;
+width: 100%;
+object-fit: cover;
+}
+
+@media only screen and (max-width: 800px) {
+.blogModalImage{
+  width:100vw;
+  height:40vh;
+}
+.modalText{
+  justify-content: flex-start;
+  overflow:scroll;
+}
+}
