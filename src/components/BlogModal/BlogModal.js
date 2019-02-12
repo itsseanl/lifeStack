@@ -9,6 +9,7 @@ const BlogModal = ({ info, handleClose, showModal }) => {
   return (
     <div className={ showHideClassName }>
       <div className="blogModalContent">
+      <article>
         <div className="blogModalImage">
           <img src={info[0].img} />
         </div>
@@ -18,6 +19,7 @@ const BlogModal = ({ info, handleClose, showModal }) => {
           <div dangerouslySetInnerHTML={{__html: info[0].text }}></div>
         </div>
         <button  className="btnClose" onClick={handleClose}><i class="fas fa-times"></i></button>
+        </article>
       </div>
     </div>
   );

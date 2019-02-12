@@ -60,7 +60,7 @@ button:active{
   height:auto;
   width:70%;
 }
-/* .footer{
+.footer{
   width:100vw;
   background-color:#1E2222;
 }
@@ -68,17 +68,20 @@ button:active{
   margin:0;
   display:flex;
   flex-direction: row;
+  justify-content: flex-end;
   list-style: none;
+  width:95vw;
 }
 .footer > ul li{
   display:flex;
+  padding:5px;
   flex-direction: row;
-  font-size:36px;
+  font-size:24px;
   color:white;
 }
 .footer > a {
   color:white;
-} */
+}
 @media only screen and (max-width: 800px) {
 .selected{
   height:auto;
