@@ -87,7 +87,7 @@ class MainContent extends React.Component {
         <p className="aboutText">My goal is to share what technology I use on a daily basis, how I use it for work as a web dev and beyond, and occasional blog posts on an assortment of topics from web dev to tips on the latest game I’m playing.</p>
 
         <p className="aboutText">If that sounds like it might float your boat, stick around for a while! Once I work out all the code and flesh out my product write-ups I’ll be hoping to post frequently on here about my journey with web development, as well as implement some slick new features as I learn.</p>
-
+        <p className="aboutText">Some of the product write-ups may contain links to Amazon listings. As an Amazon Associate I earn from qualifying purchases.</p> 
         <p className="aboutText">Thanks Again!</p>
         <p className="aboutText">Sean</p>
       </div>
