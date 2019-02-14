@@ -66,7 +66,7 @@ class Blog extends React.Component {
         <h1 key={title}>{title}</h1>
         <p key={date}>{date}</p>
 
-        <p key={previewText}>{previewText}</p>
+        <p key={previewText} dangerouslySetInnerHTML={{__html: previewText}}></p>
     </div>
     </a>
   )}

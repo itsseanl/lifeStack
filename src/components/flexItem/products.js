@@ -48,6 +48,7 @@ class Products extends React.Component {
       {this.props.productList.map(({name, price, description, image}) =>
       <button className="btnModal" onClick={() => this.showModal(name, price, description, image)}>
         <div className="flexItem">
+        
           <img key={image} src={image} className="img"/>
 
           <p key={name}>{name}</p>
